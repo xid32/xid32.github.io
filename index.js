@@ -1,4 +1,4 @@
-var myChart = echarts.init(document.getElementById('main'));
+// var myChart = echarts.init(document.getElementById('main'));
 option = {
     tooltip: {
         trigger: 'item',
@@ -7,7 +7,7 @@ option = {
     legend: {
         orient: 'vertical',
         left: 10,
-        data: ['Politics, law', 'mMilitary', 'Computer Science', 'Culture and education', 'Language and writing','History and geography', 'Natural Scienc']
+        data: ['Politics, law', 'Military', 'Computer Science', 'Culture and education', 'Language and writing','History and geography', 'Natural Scienc']
     },
     series: [
         {
@@ -43,12 +43,15 @@ option = {
 };
 
 
-myChart.setOption(option);
+// myChart.setOption(option);
 
 let oLoading = document.querySelectorAll(".loading")[0];
 let oContent = document.querySelectorAll(".content")[0];
+oLoading.style.display = 'none';
+oContent.style.display = 'block';
 
-setTimeout(() => {
-    oLoading.style.display = 'none';
-    oContent.style.display = 'block';
-}, 300);
+//js loading
+// setTimeout(() => {
+//     oLoading.style.display = 'none';
+//     oContent.style.display = 'block';
+// }, 300);
