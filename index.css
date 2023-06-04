@@ -396,7 +396,9 @@ footer {
   border: none;
   border-radius: 5px;
   margin: 20px 40px;
+  float: right;
 }
+
 
 
 @media screen and (max-width: 900px) {
