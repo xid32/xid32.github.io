@@ -160,7 +160,7 @@ nav a:hover {
 }
 
 .biography {
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 30px;
 }
 
@@ -175,7 +175,7 @@ nav a:hover {
 .interests ul,
 .interests li {
   list-style: disc;
-  font-size: 17px;
+  font-size: 16.5px;
 }
 
 .interests-item {
