@@ -155,12 +155,12 @@ nav a:hover {
 }
 
 .biography-title {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: normal;
 }
 
 .biography {
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 30px;
 }
 
@@ -175,7 +175,7 @@ nav a:hover {
 .interests ul,
 .interests li {
   list-style: disc;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .interests-item {
@@ -557,7 +557,6 @@ footer {
   }
   
   .education-ul {
-    
   }
   
   .education-item {
