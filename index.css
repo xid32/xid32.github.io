@@ -98,7 +98,7 @@ nav a:hover {
 }
 
 .name {
-  font-size: 30px;
+  font-size: 22px;
   margin: 10px 0;
 }
 
@@ -123,17 +123,17 @@ nav a:hover {
 }
 
 .icon-item img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .biography-title {
-  font-size: 45px;
+  font-size: 32px;
   font-weight: normal;
 }
 
 .biography {
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
@@ -148,7 +148,7 @@ nav a:hover {
 .interests ul,
 .interests li {
   list-style: disc;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .interests-item {
@@ -165,11 +165,16 @@ nav a:hover {
 
 .interests h2,
 .education h2 {
-  font-size: 26px;
+  font-size: 16px;
 }
 
 .education-item {
   display: flex;
+}
+
+.education-desc .time,
+.education-desc .school {
+  font-size: 13.5px; 
 }
 
 .education-item img {
@@ -204,7 +209,7 @@ nav a:hover {
 }
 
 .showcase-left-title {
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .showcase-left-desc {
@@ -215,6 +220,10 @@ nav a:hover {
 .showcase-right {
   width: 50vw;
   padding-top: 100px;
+}
+
+.showcase-right td {
+  font-size: 16px; 
 }
 
 .showcase-desc {
