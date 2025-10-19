@@ -824,3 +824,28 @@ section[id],
     padding: 10px 12px !important;    /* 与左栏保持一致的左右留白 */
   }
 }
+
+
+/* 手机端：强制所有 section 左栏居中（更高优先级 + !important） */
+@media (max-width: 900px){
+  section.showcase .showcase-left{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;  /* 横向居中子元素 */
+    text-align: center !important;   /* 文本居中 */
+    width: 100% !important;
+    padding: 16px 12px !important;   /* 两侧留白，避免贴边 */
+  }
+  /* 防止子元素自身有宽度/对齐造成“看起来靠左” */
+  section.showcase .showcase-left > *{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 右栏也全宽并留白，和左栏对齐 */
+  section.showcase .showcase-right{
+    width: 100% !important;
+    padding: 10px 12px !important;
+    box-sizing: border-box !important;
+  }
+}
