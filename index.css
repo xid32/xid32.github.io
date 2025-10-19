@@ -1,851 +1,165 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-ul, li {
-  list-style: none;
-}
-
-/* 导航相关样式 - 修改的部分 */
-.nav1-show {
-  display: flex;
-}
-
-.nav2-show {
-  display: none;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  height: 70px;
-  align-items: center;
-  box-shadow: 0 5px 5px #c5c2c2;
-  position: fixed;
-  width: 100vw;
-  background: #fff;
-  z-index: 9999;
-}
-
-.nav-ul {
-  display: flex;
-}
-
-.mobile-nav {
-  display: none;
-}
-
-.nav-item {
-  margin-right: 20px;
-}
-
-nav a {
-  font-weight: 600;
-  text-decoration: none;
-  color: #000;
-}
-
-nav a:hover {
-  color: #4294e5;
-}
-
-.content {
-  display: block;
-}
-
-.loading {
-  display: none;
-}
-
-.wriggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tip {
-  text-align: center;
-  color: #34ADB5;
-  margin-top: 4px;
-}
-
-.body {
-  display: flex;
-  padding: 90px 90px 0;
-}
-
-.body .left {
-  width: 30vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.body .right {
-  width: 70vw;
-  margin-top: 50px;
-  padding-bottom: 100px;
-}
-
-.head-img {
-  background: url('./head.jpeg');
-  width: 200px;
-  height: 200px;
-  background-size: 100% 100%;
-  border-radius: 100px;
-  margin: 50px 0 30px;
-}
-
-.name {
-  font-size: 22px;
-  margin: 10px 0;
-}
-
-.desc {
-  color: #aaa;
-  margin: 10px 0;
-}
-
-.desc2 {
-  color: #4294e5;
-  margin: 10px 0;
-}
-
-.icon {
-  display: flex;
-}
-
-.icon-item {
-  cursor: pointer;
-  margin-right: 10px;
-  padding: 2px;
-}
-
-.icon-item img {
-  width: 25px;
-  height: 25px;
-}
-
-.biography-title {
-  font-size: 32px;
-  font-weight: normal;
-}
-
-.biography {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.other-info {
-  display: flex;
-}
-
-.interests {
-  width: 40vw;
-}
-
-.interests ul,
-.interests li {
-  list-style: disc;
-  font-size: 14px;
-}
-
-.interests-item {
-  margin-bottom: 5px;
-}
-
-.interests-ul {
-  padding-left: 50px;
-}
-
-.education {
-  padding-left: 40px;
-}
-
-.interests h2,
-.education h2 {
-  font-size: 16px;
-}
-
-.education-item {
-  display: flex;
-}
-
-.education-desc .time,
-.education-desc .school {
-  font-size: 13.5px; 
-}
-
-.education-item img {
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-}
-
-.education-item .school {
-  color: #8b9596;
-}
-
-.showcase:nth-child(2n+1) {
-  display: flex;
-  background: #f7f7f7;
-  padding-bottom: 100px;
-}
-
-.showcase:nth-child(2n) {
-  display: flex;
-  padding-bottom: 100px;
-  background: #fff;
-}
-
-.showcase-left {
-  padding: 100px 100px;
-  width: 20vw;
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.showcase-left-title {
-  font-size: 35px;
-}
-
-.showcase-left-desc {
-  font-size: 26px;
-  color: #b2b2b2;
-}
-
-.showcase-right {
-  width: 50vw;
-  padding-top: 100px;
-}
-
-.showcase-right td {
-  font-size: 16px; 
-}
-
-.showcase-desc {
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0px 0px 10px #c5c2c2;
-  margin-bottom: 20px;
-}
-
-.showcase-desc-img {
-  width: 100vw;
-}
-
-.showcase-title {
-  font-size: 34px;
-}
-
-.showcase-content {
-  font-size: 22px;
-}
-
-.desc-name {
-  color: #4371a1;
-  font-size: 22px;
-}
-
-.desc-date {
-  color: #45962b;
-  font-size: 22px;
-}
-
-.tag {
-  display: flex;
-}
-
-.tag-item {
-  font-size: 14px;
-  padding: 0 4px;
-  color: #4294e5;
-  border: 2px solid #4294e5;
-  border-radius: 5px;
-  margin-right: 8px;
-}
-
-.tag-item:hover {
-  color: #fff;
-  background: #4294e5;
-}
-
-.teaching-title {
-  font-size: 26px;
-  margin: 30px 0 15px;
-}
-
-.teaching-title:first-child {
-  margin-top: 0;
-}
-
-.teaching,
-.teaching-item {
-  font-size: 22px;
-  list-style: disc;
-  margin-left: 20px;
-}
-
-.experience-desc {
-  font-size: 20px;
-}
-
-.experience-ul {
-  margin: 20px 0;
-}
-
-.experience-item {
-  list-style: disc;
-  margin-left: 40px;
-}
-
-.contact-ul {
-  font-size: 26px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin: 20px;
-}
-
-.contact-svg {
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-}
-
-.experience-svg {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
-
-footer {
-  text-align: center;
-  margin: 20px;
-  color: #8b9596;
-}
-
-.contact-ul a {
-  text-decoration: none;
-  color: #4294e5;
-}
-
-#main {
-  z-index: 10;
-}
-
-.experience-title {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.experience-title-desc {
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.experience-title-italic {
-  font-size: 18px;
-  font-style: italic;
-}
-
-.showcase-svg {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 0;
-}
-
-.project-title {
-  font-size: 30px;
-  margin-bottom: 40px;
-}
-
-.project-ul {
-  display: flex;
-  list-style: none;
-}
-
-.project-li {
-  width: 500px;
-  margin-right: 30px;
-  list-style: none;
-}
-
-.view-more {
-  background: #4294e5;
-  font-size: 16px;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  margin: 20px 40px;
-  float: right;
-}
-
-/* 媒体查询部分 */
-@media screen and (max-width: 900px) {
-  .nav1-show {
-    display: none;
-  }
-
-  .nav2-show {
-    display: flex;
-  }
-
-  .nav2-show a {
-    margin-right: 10px;
-  }
-
-  .mobile-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 90px 26px 0;
-  }
-
-  nav .title {
-    font-size: 22px;
-  }
-
-  .body {
-    display: block;
-    padding: 30px 20px 0;
-  }
-
-  .body .left {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .body .right {
-    width: 100%;
-    margin-top: 50px;
-    padding-bottom: 100px;
-  }
-
-  .head-img {
-    background: url('./head.jpeg');
-    width: 200px;
-    height: 200px;
-    background-size: 100% 100%;
-    border-radius: 100px;
-    margin: 50px 0 30px;
-  }
-
-  .name {
-    font-size: 30px;
-    margin: 10px 0;
-  }
-
-  .biography-title {
-    text-align: center;
-    font-size: 50px;
-    font-weight: normal;
-    margin-bottom: 10px;
-  }
-
-  .biography {
-    padding: 0 20px;
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-
-  .other-info {
-    display: block;
-  }
-
-  .interests {
-    width: 100%;
-    margin-right: 10px;
-  }
-
-  .interests h2 {
-    text-align: center;
-  }
-
-  .interests ul,
-  .interests li {
-    list-style: disc;
-    font-size: 16px;
-  }
-
-  .interests-ul {
-    width: 95%;
-    padding-left: 30px;
-    margin-bottom: 20px;
-  }
-
-  .education {
-    padding-left: 10px;
-  }
-
-  .interests h2,
-  .education h2 {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-
-  .education-item img {
-    width: 20px;
-    margin-right: 10px;
-    margin-top: -18px;
-  }
-
-  .showcase:nth-child(2n+1),
-  .showcase:nth-child(2n) {
-    display: block;
-    padding-bottom: 30px;
-  }
-
-  .showcase:nth-child(2n+1) {
-    background: #f7f7f7;
-  }
-
-  .showcase:nth-child(2n) {
-    background: #fff;
-  }
-
-  .showcase-left {
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-  }
-
-  .showcase-right {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px 10px;
-  }
-
-  .showcase-title {
-    font-size: 22px;
-  }
-
-  .desc-name {
-    font-size: 18px;
-  }
-
-  .desc-date {
-    font-size: 18px;
-  }
-
-  .contact-ul {
-    font-size: 18px;
-  }
-
-  .contact-item {
-    margin: 10px;
-  }
-
-  .contact-svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-  }
-
-  .experience-svg {
-    width: 30px;
-    height: 30px;
-    margin-right: 6px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  #main {
-    width: 300px !important;
-    height: 500px !important;
-  }
-
-  .project-title {
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 50px;
-    border-top: 1px solid #000;
-  }
-
-  .project-ul {
-    display: block;
-    margin-left: 0;
-    padding: 0 0 30px;
-  }
-
-  .project-li {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0;
-  }
-
-  .project-ul img {
-    display: block;
-    margin: 0 auto;
-    height: 200px !important;
-  }
-
-  .time,
-  .school {
-    width: 70vw;
-    text-wrap: wrap;
-  }
-}
-
-/* ── 头像-姓名-icon 间距压缩 ───────────────── */
-.head-img{
-  margin: 40px 0 12px;   /* 原来是 50px 0 30px；把底部改小 */
-}
-
-.name{
-  margin: 0 0 8px;       /* 去掉默认的大下边距 */
-  line-height: 1.1;      /* 避免行高撑开 */
-}
-
-.icon{
-  display: flex;
-  justify-content: center;
-  margin-top: 0;         /* 不再额外往下挤 */
-  gap: 10px;             /* 用 gap 控制左右间距更稳定 */
-}
-
-.icon-item{              /* 如果你不想用 gap，就把 margin 调小 */
-  margin-right: 8px;
-}
-.icon-item:last-child{
-  margin-right: 0;
-}
-
-/* 移动端也一起压缩（可选） */
-@media screen and (max-width: 900px){
-  .head-img{ margin: 30px 0 10px; }
-  .name{ margin: 0 0 6px; }
-  .icon{ margin-top: 0; gap: 8px; }
-}
-
-
-/* ── 统一控制 section 间距 ── */
+/* ============= Base & Vars ============= */
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
 :root{
-  --section-vspace: 36px;        /* 你想要的间距，试 24/32/36/40 调整 */
+  --nav-h:70px;
+  --page-hpad-desktop:90px;
+  --section-vspace:36px; /* 可调：24/32/36/40 */
 }
 
-/* About Me 区域底部留白变小 */
-.body .right{
+/* ============= Nav ============= */
+.nav1-show{display:flex;}
+.nav2-show{display:none;}
+nav{
+  position:fixed; inset:0 0 auto 0; height:var(--nav-h);
+  display:flex; justify-content:space-around; align-items:center;
+  width:100vw; background:#fff; box-shadow:0 5px 5px #c5c2c2; z-index:9999;
+}
+.nav-ul{display:flex;}
+.mobile-nav{display:none;}
+.nav-item{margin-right:20px;}
+nav a{font-weight:600; text-decoration:none; color:#000;}
+nav a:hover{color:#4294e5;}
+
+/* ============= Anchor offset ============= */
+html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 14px);}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
+
+/* ============= Header / Hero (About) ============= */
+.body{
+  display:flex;
+  padding: calc(var(--nav-h) + 20px) var(--page-hpad-desktop) 0; /* 顶部让出导航位 */
+}
+.body .left{width:30vw; display:flex; flex-direction:column; align-items:center;}
+.body .right{width:70vw; margin-top:50px; padding-bottom:var(--section-vspace);}
+
+.head-img{
+  background:url('./head.jpeg'); background-size:100% 100%;
+  width:200px; height:200px; border-radius:100px; margin:40px 0 12px;
+}
+.name{font-size:22px; margin:0 0 8px; line-height:1.1;}
+.icon{display:flex; justify-content:center; gap:10px;}
+.icon-item{cursor:pointer; padding:2px;}
+.icon-item img{width:25px; height:25px;}
+
+.biography-title{font-size:32px; font-weight:normal;}
+.biography{font-size:18px; margin-bottom:30px;}
+
+/* ============= Showcase（通用区块） ============= */
+/* 统一页面左右留白、区块底部留白 */
+.showcase{
+  display:flex;
+  padding: 0 var(--page-hpad-desktop);
   padding-bottom: var(--section-vspace);
 }
+.showcase:nth-of-type(2n+1){background:#f7f7f7;}
+.showcase:nth-of-type(2n){background:#fff;}
 
-/* 每个 section 顶部留白（原来 100px） */
-.showcase-left,
+/* 左/右栏 */
+.showcase-left{
+  width:30vw;
+  padding-top: var(--section-vspace);
+  display:flex; flex-direction:column; align-items:flex-start; /* 桌面靠左 */
+}
 .showcase-right{
+  width:70vw;
   padding-top: var(--section-vspace);
 }
+.showcase-left-title{font-size:35px;}
+.showcase-left-desc{font-size:26px; color:#b2b2b2;}
+.showcase-right td{font-size:16px;}
 
-/* 每个 section 底部留白（原来 100px） */
-.showcase{
-  padding-bottom: var(--section-vspace);
-}
+/* 其它通用排版（保留你的样式） */
+.showcase-desc{padding:20px; background:#fff; box-shadow:0 0 10px #c5c2c2; margin-bottom:20px;}
+.showcase-desc-img{width:100vw;}
+.showcase-title{font-size:34px;}
+.showcase-content{font-size:22px;}
+.desc-name{color:#4371a1; font-size:22px;}
+.desc-date{color:#45962b; font-size:22px;}
+.tag{display:flex;}
+.tag-item{font-size:14px; padding:0 4px; color:#4294e5; border:2px solid #4294e5; border-radius:5px; margin-right:8px;}
+.tag-item:hover{color:#fff; background:#4294e5;}
+.teaching-title{font-size:26px; margin:30px 0 15px;}
+.teaching-title:first-child{margin-top:0;}
+.teaching, .teaching-item{font-size:22px; list-style:disc; margin-left:20px;}
+.experience-desc{font-size:20px;}
+.experience-ul{margin:20px 0;}
+.experience-item{list-style:disc; margin-left:40px;}
+.contact-ul{font-size:26px;}
+.contact-item{display:flex; align-items:center; margin:20px;}
+.contact-svg{width:30px; height:30px; margin-right:20px;}
+.experience-svg{width:50px; height:50px; margin-right:20px;}
+footer{text-align:center; margin:20px; color:#8b9596;}
+.contact-ul a{text-decoration:none; color:#4294e5;}
+#main{z-index:10;}
+.experience-title{font-weight:bold; font-size:30px;}
+.experience-title-desc{font-weight:bold; font-size:24px;}
+.experience-title-italic{font-size:18px; font-style:italic;}
+.showcase-svg{width:20px; height:20px; position:absolute; right:0;}
+.project-title{font-size:30px; margin-bottom:40px;}
+.project-ul{display:flex;}
+.project-li{width:500px; margin-right:30px;}
+.view-more{background:#4294e5; font-size:16px; color:#fff; padding:5px 10px; border:none; border-radius:5px; margin:20px 40px; float:right;}
 
-/* 移动端再缩一点（可选） */
-@media screen and (max-width: 900px){
-  :root{ --section-vspace: 24px; }
-}
+/* ============= News（简洁学术风列表） ============= */
+#News .news-plain{list-style:none; margin:0; padding:0; font-size:16px; line-height:1.55;}
+#News .news-plain li{display:flex; align-items:flex-start; padding:6px 0; border-bottom:1px solid #e6e6e6;}
+#News .news-plain li:last-child{border-bottom:0;}
+#News .news-plain .date{font-weight:700; color:#1b6535; white-space:nowrap; margin-right:14px;}
 
+/* ============= Mobile ≤ 900px（唯一一处） ============= */
+@media (max-width:900px){
+  /* 顶部：显示简版导航与移动菜单 */
+  .nav1-show{display:none;}
+  .nav2-show{display:flex;}
+  .nav2-show a{margin-right:10px;}
+  .mobile-nav{display:flex; justify-content:center; flex-wrap:wrap; padding: calc(var(--nav-h) + 20px) 26px 0;}
 
-/* ── News section (compact academic style) ───────────────────────────── */
-.news-list-compact {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
+  html{scroll-padding-top:80px;}
+  section[id]{scroll-margin-top:80px;}
 
-.news-list-compact li {
-  display: flex;
-  align-items: flex-start;
-  font-size: 17px;
-  margin: 8px 0;
-  line-height: 1.6;
-}
+  /* Header 区域改为纵向并缩小内边距 */
+  .body{display:block; padding:30px 20px 0;}
+  .body .left{width:100%; align-items:center;}
+  .body .right{width:100%; margin-top:50px; padding-bottom:var(--section-vspace);}
+  .head-img{margin:30px 0 10px;}
+  .name{font-size:30px; margin:0 0 6px;}
+  .biography-title{font-size:50px; font-weight:normal; text-align:center; margin-bottom:10px;}
+  .biography{padding:0 20px; font-size:18px; margin-bottom:30px;}
 
-.news-emoji {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-
-.news-emoji img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.news-date {
-  font-weight: 700;
-  color: #1b6535; /* 深绿色 */
-  margin-right: 6px;
-  white-space: nowrap;
-}
-
-.news-text {
-  color: #000;
-}
-
-.news-text a {
-  color: #3366cc;
-  text-decoration: none;
-}
-
-.news-text a:hover {
-  text-decoration: underline;
-}
-
-/* 移动端略微缩小字体与间距 */
-@media screen and (max-width: 900px) {
-  .news-list-compact li {
-    font-size: 15px;
-    line-height: 1.4;
+  /* Showcase 统一纵向 + 居中 + 两侧留白 */
+  .showcase{
+    display:block;
+    padding: 0 12px 24px; /* 左右不再贴边，底部留点空 */
   }
-  .news-emoji {
-    width: 24px;
-    height: 24px;
-    margin-right: 6px;
-  }
-}
-
-/* 让 News 的内容左边缘与 About Me 的正文 left edge 对齐 */
-#News{
-  /* 与 .body 一样的左右内边距 */
-  padding-left: 90px;
-  padding-right: 90px;
-}
-
-/* News 两栏宽度与 .body 保持一致，去掉左右 padding */
-#News .showcase-left{
-  width: 30vw;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-#News .showcase-right{
-  width: 70vw;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* 调整 News 区域上下间距，让它更紧凑 */
-#News {
-  padding-top: 20px;      /* 原 100 → 20 */
-  padding-bottom: 20px;   /* 原 100 → 20 */
-  margin-top: -10px;      /* 稍微往上拉一点，让它更贴近 About Me */
-}
-
-/* ① 统一为锚点滚动预留顶部空间（适配 fixed 70px 导航 + 一点缓冲） */
-html {
-  scroll-behavior: smooth;   /* 可选：平滑滚动 */
-  scroll-padding-top: 84px;  /* 导航 70px + 阴影/缓冲 ~14px */
-}
-
-/* ② 对所有可跳转的 section 再保险一次（iOS/Safari 更稳）*/
-section[id],
-.body[id] {
-  scroll-margin-top: 84px;
-}
-
-/* ③ 移动端如果导航更矮/更高，给一个对应值 */
-@media (max-width: 900px) {
-  html { scroll-padding-top: 80px; }
-  section[id], .body[id] { scroll-margin-top: 80px; }
-}
-
-/* ④ 避免锚点前的负 margin 影响定位 */
-#News { margin-top: 0 !important; }
-
-
-/* 手机端把 News 左栏标题/副标题真正居中 */
-@media (max-width: 900px) {
-  #News .showcase-left {
-    width: 100% !important;
-    padding: 16px 0 !important;
-    display: flex;               /* 仍然用 flex */
-    flex-direction: column;
-    align-items: center;         /* ✅ 关键：交叉轴居中 */
-    justify-content: center;
-    text-align: center;          /* 文本居中（双保险） */
-  }
-
-  #News .showcase-left-title,
-  #News .showcase-left-desc {
-    display: inline-block;       /* 避免被拉伸，占自适应宽度 */
-    margin: 0 auto;              /* 居中 */
-    text-align: center;
-  }
-
-  /* 右栏全宽，避免左右偏移 */
-  #News .showcase-right {
-    width: 100% !important;
-    padding: 10px 12px !important;
-  }
-}
-
-/* 手机端把 News 容器的左右内边距清零，否则看起来不居中 */
-@media (max-width: 900px){
-  #News{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-/* 手机端：统一让所有 section 的左栏标题区居中，并给一点左右内边距 */
-@media (max-width: 900px){
   .showcase-left{
-    width: 100% !important;
-    padding: 16px 12px !important;   /* 原来是 20px 0；加点左右 padding 不再贴边 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;              /* ✅ 关键：从 flex-start 改为居中 */
-    text-align: center;               /* 文本也居中 */
+    width:100%;
+    padding:16px 0 0;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
   }
   .showcase-right{
-    width: 100% !important;
-    padding: 10px 12px !important;    /* 与左栏保持一致的左右留白 */
-  }
-}
-
-
-/* 手机端：强制所有 section 左栏居中（更高优先级 + !important） */
-@media (max-width: 900px){
-  section.showcase .showcase-left{
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;  /* 横向居中子元素 */
-    text-align: center !important;   /* 文本居中 */
-    width: 100% !important;
-    padding: 16px 12px !important;   /* 两侧留白，避免贴边 */
-  }
-  /* 防止子元素自身有宽度/对齐造成“看起来靠左” */
-  section.showcase .showcase-left > *{
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width:100%;
+    padding:10px 0 0;
+    box-sizing:border-box;
   }
 
-  /* 右栏也全宽并留白，和左栏对齐 */
-  section.showcase .showcase-right{
-    width: 100% !important;
-    padding: 10px 12px !important;
-    box-sizing: border-box !important;
-  }
+  /* 表格/文字尺寸微调 */
+  .showcase-title{font-size:22px;}
+  .desc-name,.desc-date{font-size:18px;}
+  .contact-ul{font-size:18px;}
+  .contact-item{margin:10px;}
+  .contact-svg{width:18px; height:18px; margin-right:10px;}
+  .experience-svg{width:30px; height:30px; margin-right:6px;}
+  footer{font-size:12px;}
+  #main{width:300px !important; height:500px !important;}
+
+  .project-title{font-size:22px; text-align:center; margin-bottom:40px; padding-top:50px; border-top:1px solid #000;}
+  .project-ul{display:block; margin-left:0; padding:0 0 30px;}
+  .project-li{width:100%; padding:20px; box-sizing:border-box; margin:0;}
+  .project-ul img{display:block; margin:0 auto; height:200px !important;}
+
+  .time,.school{width:70vw; text-wrap:wrap;}
+
+  /* News 列表在手机端的字号/行距微调 */
+  #News .news-plain li{font-size:15px; line-height:1.4;}
 }
