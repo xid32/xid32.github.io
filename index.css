@@ -809,3 +809,18 @@ section[id],
   }
 }
 
+/* 手机端：统一让所有 section 的左栏标题区居中，并给一点左右内边距 */
+@media (max-width: 900px){
+  .showcase-left{
+    width: 100% !important;
+    padding: 16px 12px !important;   /* 原来是 20px 0；加点左右 padding 不再贴边 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;              /* ✅ 关键：从 flex-start 改为居中 */
+    text-align: center;               /* 文本也居中 */
+  }
+  .showcase-right{
+    width: 100% !important;
+    padding: 10px 12px !important;    /* 与左栏保持一致的左右留白 */
+  }
+}
