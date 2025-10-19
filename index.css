@@ -752,3 +752,16 @@ footer {
   padding-bottom: 20px;   /* 原 100 → 20 */
   margin-top: -10px;      /* 稍微往上拉一点，让它更贴近 About Me */
 }
+
+@media screen and (max-width: 900px) {
+  #News .showcase-left,
+  #News .showcase-right {
+    text-align: center;       /* 让标题和文字居中 */
+    padding: 10px 20px;       /* 缩小内边距 */
+  }
+
+  #News .news-plain {
+    display: inline-block;    /* 内容块水平居中 */
+    text-align: left;         /* 但内部文字仍然左对齐 */
+  }
+}
