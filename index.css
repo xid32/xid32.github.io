@@ -205,7 +205,7 @@ nav a:hover {
   padding-top: 100px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 
 .showcase-left-title {
@@ -773,3 +773,39 @@ section[id],
 
 /* ④ 避免锚点前的负 margin 影响定位 */
 #News { margin-top: 0 !important; }
+
+
+/* 手机端把 News 左栏标题/副标题真正居中 */
+@media (max-width: 900px) {
+  #News .showcase-left {
+    width: 100% !important;
+    padding: 16px 0 !important;
+    display: flex;               /* 仍然用 flex */
+    flex-direction: column;
+    align-items: center;         /* ✅ 关键：交叉轴居中 */
+    justify-content: center;
+    text-align: center;          /* 文本居中（双保险） */
+  }
+
+  #News .showcase-left-title,
+  #News .showcase-left-desc {
+    display: inline-block;       /* 避免被拉伸，占自适应宽度 */
+    margin: 0 auto;              /* 居中 */
+    text-align: center;
+  }
+
+  /* 右栏全宽，避免左右偏移 */
+  #News .showcase-right {
+    width: 100% !important;
+    padding: 10px 12px !important;
+  }
+}
+
+/* 手机端把 News 容器的左右内边距清零，否则看起来不居中 */
+@media (max-width: 900px){
+  #News{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
