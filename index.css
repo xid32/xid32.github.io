@@ -753,43 +753,23 @@ footer {
   margin-top: -10px;      /* 稍微往上拉一点，让它更贴近 About Me */
 }
 
-/* 手机端：让 News 左栏标题、副标题真正居中 */
-@media screen and (max-width: 900px) {
-  /* 去掉可能把内容推偏的左右 padding */
-  #News {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+/* ① 统一为锚点滚动预留顶部空间（适配 fixed 70px 导航 + 一点缓冲） */
+html {
+  scroll-behavior: smooth;   /* 可选：平滑滚动 */
+  scroll-padding-top: 84px;  /* 导航 70px + 阴影/缓冲 ~14px */
 }
 
-/* 手机端：让 News 左栏标题、副标题真正居中 */
-@media screen and (max-width: 900px) {
-  /* 去掉可能把内容推偏的左右 padding */
-  #News {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* 左栏改为在交叉轴居中（块元素才会居中），并减小内边距 */
-  #News .showcase-left {
-    width: 100% !important;
-    padding: 16px 0 !important;
-    display: flex;              /* 仍用 flex */
-    flex-direction: column;
-    align-items: center;        /* ✅ 关键：让子块元素居中 */
-    justify-content: center;
-  }
-
-  /* 标题与副标题都水平居中、去掉默认 margin */
-  #News .showcase-left-title,
-  #News .showcase-left-desc {
-    margin: 0;
-    text-align: center;
-  }
-
-  /* 右栏在手机端占满宽度，避免左右偏移（可选） */
-  #News .showcase-right {
-    width: 100% !important;
-    padding: 10px 12px !important;
-  }
+/* ② 对所有可跳转的 section 再保险一次（iOS/Safari 更稳）*/
+section[id],
+.body[id] {
+  scroll-margin-top: 84px;
 }
+
+/* ③ 移动端如果导航更矮/更高，给一个对应值 */
+@media (max-width: 900px) {
+  html { scroll-padding-top: 80px; }
+  section[id], .body[id] { scroll-margin-top: 80px; }
+}
+
+/* ④ 避免锚点前的负 margin 影响定位 */
+#News { margin-top: 0 !important; }
