@@ -760,6 +760,15 @@ footer {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+}
+
+/* 手机端：让 News 左栏标题、副标题真正居中 */
+@media screen and (max-width: 900px) {
+  /* 去掉可能把内容推偏的左右 padding */
+  #News {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
   /* 左栏改为在交叉轴居中（块元素才会居中），并减小内边距 */
   #News .showcase-left {
@@ -784,4 +793,3 @@ footer {
     padding: 10px 12px !important;
   }
 }
-
