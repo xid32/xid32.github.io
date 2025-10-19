@@ -600,3 +600,155 @@ footer {
     text-wrap: wrap;
   }
 }
+
+/* ── 头像-姓名-icon 间距压缩 ───────────────── */
+.head-img{
+  margin: 40px 0 12px;   /* 原来是 50px 0 30px；把底部改小 */
+}
+
+.name{
+  margin: 0 0 8px;       /* 去掉默认的大下边距 */
+  line-height: 1.1;      /* 避免行高撑开 */
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  margin-top: 0;         /* 不再额外往下挤 */
+  gap: 10px;             /* 用 gap 控制左右间距更稳定 */
+}
+
+.icon-item{              /* 如果你不想用 gap，就把 margin 调小 */
+  margin-right: 8px;
+}
+.icon-item:last-child{
+  margin-right: 0;
+}
+
+/* 移动端也一起压缩（可选） */
+@media screen and (max-width: 900px){
+  .head-img{ margin: 30px 0 10px; }
+  .name{ margin: 0 0 6px; }
+  .icon{ margin-top: 0; gap: 8px; }
+}
+
+
+/* ── 统一控制 section 间距 ── */
+:root{
+  --section-vspace: 36px;        /* 你想要的间距，试 24/32/36/40 调整 */
+}
+
+/* About Me 区域底部留白变小 */
+.body .right{
+  padding-bottom: var(--section-vspace);
+}
+
+/* 每个 section 顶部留白（原来 100px） */
+.showcase-left,
+.showcase-right{
+  padding-top: var(--section-vspace);
+}
+
+/* 每个 section 底部留白（原来 100px） */
+.showcase{
+  padding-bottom: var(--section-vspace);
+}
+
+/* 移动端再缩一点（可选） */
+@media screen and (max-width: 900px){
+  :root{ --section-vspace: 24px; }
+}
+
+
+/* ── News section (compact academic style) ───────────────────────────── */
+.news-list-compact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.news-list-compact li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 17px;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.news-emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.news-emoji img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.news-date {
+  font-weight: 700;
+  color: #1b6535; /* 深绿色 */
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.news-text {
+  color: #000;
+}
+
+.news-text a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.news-text a:hover {
+  text-decoration: underline;
+}
+
+/* 移动端略微缩小字体与间距 */
+@media screen and (max-width: 900px) {
+  .news-list-compact li {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .news-emoji {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+}
+
+/* 让 News 的内容左边缘与 About Me 的正文 left edge 对齐 */
+#News{
+  /* 与 .body 一样的左右内边距 */
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+/* News 两栏宽度与 .body 保持一致，去掉左右 padding */
+#News .showcase-left{
+  width: 30vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#News .showcase-right{
+  width: 70vw;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 调整 News 区域上下间距，让它更紧凑 */
+#News {
+  padding-top: 20px;      /* 原 100 → 20 */
+  padding-bottom: 20px;   /* 原 100 → 20 */
+  margin-top: -10px;      /* 稍微往上拉一点，让它更贴近 About Me */
+}
