@@ -60,13 +60,15 @@
         <br><br>
         <section class="biography">
           
-        <p>I am currently a Ph.D. student at <a href="https://web.cs.dartmouth.edu/" style="color:#4169E1; text-decoration: none;">Dartmouth College</a>. 
-          My research interests focus on <strong>multimodal learning</strong>. 
-          I have published papers and developed codes for 
-          temporal modeling, efficient training, and audio-video-language integration, advancing state-of-the-art 
-          <strong>multimodal large language models</strong> (MLLMs) applications such as multimodal question answering. During my Ph.D. studies, I interned at Amazon <img src="images/amazon_logo.png" width = "25" height = "25" align=center /> as an Applied Scientist in 2025.</p>
+        <p>I am currently a Ph.D. candidate at <a href="https://web.cs.dartmouth.edu/" style="color:#4169E1; text-decoration: none;">Dartmouth College 🌲</a>. 
+          My research focuses on <strong>multimodal learning</strong> for video, audio, and language understanding. I have developed methods for <strong>multimodal representation learning</strong> and 
+          <strong>multimodal reasoning</strong> with the goal of building scalable and generalizable systems that 
+          support complex real-world scenarios.
+           During my Ph.D. studies, I interned at Amazon <img src="images/amazon_logo.png" width = "25" height = "25" align=center /> as an Applied Scientist in 2025.</p>
           
-        <br><p>Prior to Dartmouth, I earned a Master's degree in Computer Science from Northwestern University (2021), advised by Prof. <a href="https://habitslab.github.io/" style="color:#4169E1; text-decoration: none;">Nabil Alshurafa</a> (<span style="color: #e141cc;">Thank you, Nabil!</span>), and a B.S. degree in Computer Science from the University of Pittsburgh (2020).</p>
+        <br><p>Prior to Dartmouth, I completed my M.S. in Computer Science at Northwestern University (2021), advised by 
+          Prof. <a href="https://habitslab.github.io/" style="color:#4169E1; text-decoration: none;">Nabil Alshurafa</a> and B.S. in Computer Science from the University of Pittsburgh (2020).
+          </p>
 
       </section>
       </div>
@@ -76,7 +78,7 @@
 </section>
 
 
-<section id="News" class="showcase">
+<!-- <section id="News" class="showcase">
   <div class="showcase-left">
     <div class="showcase-left-title">News</div>
     <div class="showcase-left-desc">Recent News</div>
@@ -138,7 +140,84 @@
 </ul>
 
   </div>
+</section> -->
+
+
+<section id="News" class="showcase">
+  <div class="showcase-left">
+    <div class="showcase-left-title">News</div>
+    <div class="showcase-left-desc">Recent Highlights</div>
+  </div>
+
+  <div class="showcase-right">
+
+    <style>
+      #News .news-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      #News .news-item {
+        margin-bottom: 14px;
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: #fafafa;
+        transition: background 0.2s ease;
+      }
+      #News .news-item:hover {
+        background: #f2f2f2;
+      }
+
+      #News .news-date {
+        color: #6b6b6b;
+        font-size: 14px;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      #News .news-text {
+        color: #333;
+      }
+    </style>
+
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">Sep 2025</span>
+        <span class="news-text">Finished my internship as an Applied Scientist at Amazon. Grateful to my mentor, manager, and all collaborators for the invaluable experience.</span>
+      </li>
+      
+      <li class="news-item">
+        <span class="news-date">Aug 2025</span>
+        <span class="news-text">Four papers accepted to EMNLP 2025, including two first-author <span style="color:#E55C5C;">oral presentations</span>. See you in Suzhou!</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">May 2025</span>
+        <span class="news-text">One first-author paper accepted at ACL 2025. See you in Vienna!</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Jan 2025</span>
+        <span class="news-text">One first-author paper accepted to NAACL 2025. See you in Albuquerque!</span>
+      </li>
+
+      <li class="news-item">
+        <span class="news-date">Oct 2024</span>
+        <span class="news-text">One first-author paper accepted at WACV 2025. See you in Tucson!</span>
+      </li>
+    </ul>
+
+  </div>
 </section>
+
+
+
+
+
 
     <section id="Publications" class="showcase">
       <div class="showcase-left">
@@ -149,261 +228,255 @@
         </div>
       </div>
       <div class="showcase-right">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+  <!-- --------------------- FIRST AUTHOR --------------------- -->
+  <h3 style="margin-top: 0; margin-bottom: 12px; font-size: 20px; color:#1b6535;">
+    Selected First-Author Publications 
+    <a href="https://scholar.google.com/citations?user=-U2KzpYAAAAJ&hl=en" target="_blank" 
+     style="color:#4169E1; text-decoration:none; font-size:15px; opacity:0.8;">
+    (full list)
+  </a>
+  </h3>
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+
+      <!-- SoundMind -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/SoundMind.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2025.emnlp-main.27.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>SoundMind: RL-Incentivized Logic Reasoning for Audio-Language Models</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong>, Chunhui Zhang, Keyi Kong, Weiyi Wu, Chiyu Ma, Zhongyu Ouyang, Peijun Qing, Soroush Vosoughi, Jiang Gui
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025 <font color="#E55C5C"><strong>(Oral Presentation)</strong></font>
+        </td>
+      </tr>
+
+      <!-- Temporal Working Memory -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/TWM.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2025.findings-naacl.189.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Temporal Working Memory: Query-Guided Temporal Segment Refinement for Enhanced Multimodal Understanding</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong><sup>*</sup>, Chunhui Zhang<sup>*</sup>, Weiyi Wu, 
+          Zhongyu Ouyang, Peijun Qing, Ming Cheng, Soroush Vosoughi, Jiang Gui
+          <br>
+          <em>Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2025) Findings</em> 
+          <br> <span style="color: 	#DAA520; font-size: 15px;">(Guarini Graduate and Advanced Studies Travel Award, Dartmouth College)</span>
+        </td>
+      </tr>
 
 
-             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/SoundMind.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2025.emnlp-main.27.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>SoundMind: RL-Incentivized Logic Reasoning for Audio-Language Models</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong>, Chunhui Zhang, Keyi Kong, Weiyi Wu, Chiyu Ma, Zhongyu Ouyang, Peijun Qing, Soroush Vosoughi, Jiang Gui
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025 <font color="#E55C5C"><strong>(Oral Presentation)</strong></font>
-              </td>
-            </tr>
+      <!-- EMNLP 2024 Findings -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/emnlp24_Amuse.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2024.findings-emnlp.159.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Learning Musical Representations for Music Performance Question Answering</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong>, Chunhui Zhang, Tingxuan Wu, Ming Cheng, Zhongyu Ouyang, Weiyi Wu, Jiang Gui
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2024) Findings</em> 
+          <span style="color: 	#DAA520; font-size: 15px;">(BMDS Travel Award, Dartmouth College)</span>
+        </td>
+      </tr>
 
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/vlas.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2025.emnlp-main.54.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>ProtoVQA: An Adaptable Prototypical Framework for Explainable Fine-Grained Visual Question Answering</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong><sup>*</sup>, Weiyi Wu<sup>*</sup>, Keyi Kong, Peijun Qing, Xinwen Xu, Ming Cheng, Soroush Vosoughi, Jiang Gui
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025 <font color="#E55C5C"><strong>(Oral Presentation)</strong></font>
-              </td>
-            </tr>
+      <!-- ProtoVQA -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/vlas.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2025.emnlp-main.54.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>ProtoVQA: An Adaptable Prototypical Framework for Explainable Fine-Grained Visual Question Answering</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong><sup>*</sup>, Weiyi Wu<sup>*</sup>, Keyi Kong, Peijun Qing, Xinwen Xu, Ming Cheng, Soroush Vosoughi, Jiang Gui
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025 <font color="#E55C5C"><strong>(Oral Presentation)</strong></font>
+        </td>
+      </tr>
 
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/Hierarchical.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2025.findings-emnlp.1042.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Knowing More, Acting Better: Hierarchical Representation for Embodied Decision-Making</papertitle>
-                </a>
-                <br>
-                Chunhui Zhang, Zhongyu Ouyang, <strong>Xingjian Diao</strong>, Zheyuan Liu, Soroush Vosoughi
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2025) Findings</em>
-              </td>
-            </tr>
+      <!-- Sparsify -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/Sparsify.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2025.acl-short.12.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Learning Sparsity for Effective and Efficient Music Performance Question Answering</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong>, Tianzhen Yang, Chunhui Zhang, Weiyi Wu, Ming Cheng, Jiang Gui
+          <br>
+          <em>Annual Meeting of the Association for Computational Linguistics (ACL)</em>, 2025
+        </td>
+      </tr>
 
+      <!-- FT2TF -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/FT2TF.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Diao_FT2TF_First-Person_Statement_Text-To-Talking_Face_Generation_WACV_2025_paper.pdf" style="color:#4169E1; text-decoration: none;">
+            <papertitle>FT2TF: First-Person Statement Text-To-Talking Face Generation</papertitle>
+          </a>
+          <br>
+          <strong>Xingjian Diao</strong>, Ming Cheng, Wayner Barrios, SouYoung Jin
+          <br>
+          <em>Winter Conference on Applications of Computer Vision (WACV)</em>, 2025
+        </td>
+      </tr>
 
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/Medllm.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/pdf/2505.07968" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Assessing and Mitigating Medical Knowledge Drift and Conflicts in Large Language Models</papertitle>
-                </a>
-                <br>
-                Weiyi Wu, Xinwen Xu, Chongyang Gao, <strong>Xingjian Diao</strong>, Siting Li, Lucas A Salas, Jiang Gui
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2025) Findings</em>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/TWM.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2025.findings-naacl.189.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Temporal Working Memory: Query-Guided Temporal Segment Refinement for Enhanced Multimodal Understanding</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong><sup>*</sup>, Chunhui Zhang<sup>*</sup>, Weiyi Wu, 
-                Zhongyu Ouyang, Peijun Qing, Ming Cheng, Soroush Vosoughi, Jiang Gui
-                <br>
-                <em>Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2025) Findings</em>
-                <br>
-                <span style="color: gold; font-size: 24px;">&#x1F396; </span> <span style="color: 	#DAA520; font-size: 15px;">Guarini School of Graduate and Advanced Studies Travel Award, Dartmouth College</span>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/Sparsify.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/pdf/2506.01319" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Learning Sparsity for Effective and Efficient Music Performance Question Answering</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong>, Tianzhen Yang, Chunhui Zhang, Weiyi Wu, Ming Cheng, Jiang Gui
-                <br>
-                <em>Annual Meeting of the Association for Computational Linguistics (ACL)</em>, 2025
-              </td>
-            </tr>
-
-
-              <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/FT2TF.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Diao_FT2TF_First-Person_Statement_Text-To-Talking_Face_Generation_WACV_2025_paper.pdf" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>FT2TF: First-Person Statement Text-To-Talking Face Generation</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong>, Ming Cheng, Wayner Barrios, SouYoung Jin
-                <br>
-                <em>Winter Conference on Applications of Computer Vision (WACV)</em>, 2025
-              </td>
-            </tr>
-
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/span.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/pdf/2406.09333" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>SPAN: Unlocking Pyramid Representations for Gigapixel Histopathological Images</papertitle>
-                </a>
-                <br>
-                Weiyi Wu, <strong>Xingjian Diao</strong>, Chongyang Gao, Xinwen Xu, Siting Li, Jiang Gui
-                <br>
-                <em>arXiv</em>, 2025
-              </td>
-            </tr>
-
-
-             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/LLMs_Design_Choices.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://d197for5662m48.cloudfront.net/documents/publicationstatus/264594/preprint_pdf/b9443b42f8c0c3cc6b063e558c77b48d.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>On The Design Choices of Next Level LLMs</papertitle>
-                </a>
-                <br>
-                Yijun Tian, <strong>Xingjian Diao</strong>, Ming Cheng, Chunhui Zhang, Jiang Gui, Soroush Vosoughi, Xiangliang Zhang, Nitesh V. Chawla, Shichao Pei
-                <br>
-                <em>arXiv</em>, 2025
-              </td>
-            </tr>
+    </tbody>
+  </table>
 
 
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/Survey4MusicAVQA.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/pdf/2505.20638" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Music's Multimodal Complexity in AVQA: Why We Need More than General Multimodal LLMs</papertitle>
-                </a>
-                <br>
-                Wenhao You<sup>*</sup>, <strong>Xingjian Diao</strong><sup>*</sup>, Chunhui Zhang, Keyi Kong, Weiyi Wu, Zhongyu Ouyang, Chiyu Ma, Tingxuan Wu, Noah Wei, Zong Ke, Ming Cheng, Soroush Vosoughi, Jiang Gui
-                <br>
-                <em>arXiv</em>, 2025
-              </td>
-            </tr>
-            
+  <!-- --------------------- COLLABORATIVE --------------------- -->
+  <h3 style="margin-top: 40px; margin-bottom: 12px; font-size: 20px; color:#1b6535;">
+    Selected Collaborative Publications 
+    <a href="https://scholar.google.com/citations?user=-U2KzpYAAAAJ&hl=en" target="_blank" 
+     style="color:#4169E1; text-decoration:none; font-size:15px; opacity:0.8;">
+    (full list)
+  </a>
+  </h3>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/judging-the-judges.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/pdf/2406.07791" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge</papertitle>
-                </a>
-                <br>
-                Lin Shi, Chiyu Ma, Wenhua Liang, <strong>Xingjian Diao</strong>, Weicheng Ma, Soroush Vosoughi
-                <br>
-                <em>International Joint Conference on Natural Language Processing and Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL)</em>, 2025
-              </td>
-            </tr>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
 
+      <!-- Hierarchical -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/Hierarchical.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2025.findings-emnlp.1042.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Knowing More, Acting Better: Hierarchical Representation for Embodied Decision-Making</papertitle>
+          </a>
+          <br>
+          Chunhui Zhang, Zhongyu Ouyang, <strong>Xingjian Diao</strong>, Zheyuan Liu, Soroush Vosoughi
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2025) Findings</em>
+        </td>
+      </tr>
 
+      <!-- MedLLM -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/Medllm.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://arxiv.org/pdf/2505.07968" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Assessing and Mitigating Medical Knowledge Drift and Conflicts in Large Language Models</papertitle>
+          </a>
+          <br>
+          Weiyi Wu, Xinwen Xu, Chongyang Gao, <strong>Xingjian Diao</strong>, Siting Li, Lucas A Salas, Jiang Gui
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2025) Findings</em>
+        </td>
+      </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/emnlp24_Amuse.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2024.findings-emnlp.159.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>Learning Musical Representations for Music Performance Question Answering</papertitle>
-                </a>
-                <br>
-                <strong>Xingjian Diao</strong>, Chunhui Zhang, Tingxuan Wu, Ming Cheng, Zhongyu Ouyang, Weiyi Wu, Jiang Gui
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP 2024) Findings</em>
-                <br>
-                <span style="color: gold; font-size: 24px;">&#x1F396; </span> <span style="color: 	#DAA520; font-size: 15px;">Biomedical Data Science Travel Award, Dartmouth College</span>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/publications/AlphaExpert_emnlp24.png" width="200" height="120">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://aclanthology.org/2024.emnlp-main.1141.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
-                  <papertitle>AlphaExpert: Assigning LoRA Experts Based on Layer Training Quality</papertitle>
-                </a>
-                <br>
-                Peijun Qing, Chongyang Gao, Yefan Zhou, <strong>Xingjian Diao</strong>, Yaoqing Yang, Soroush Vosoughi
-                <br>
-                <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024
-              </td>
-            </tr>
+      <!-- Judging the Judges -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/judging-the-judges.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://arxiv.org/pdf/2406.07791" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge</papertitle>
+          </a>
+          <br>
+          Lin Shi, Chiyu Ma, Wenhua Liang, <strong>Xingjian Diao</strong>, Weicheng Ma, Soroush Vosoughi
+          <br>
+          <em>International Joint Conference on Natural Language Processing and Asia-Pacific Chapter of the Association for Computational Linguistics (IJCNLP-AACL)</em>, 2025
+        </td>
+      </tr>
 
 
+      <!-- SPAN -->
+      <!-- <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/span.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://arxiv.org/pdf/2406.09333" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>SPAN: Unlocking Pyramid Representations for Gigapixel Histopathological Images</papertitle>
+          </a>
+          <br>
+          Weiyi Wu, <strong>Xingjian Diao</strong>, Chongyang Gao, Xinwen Xu, Siting Li, Jiang Gui
+          <br>
+          <em>arXiv</em>, 2025
+        </td>
+      </tr> -->
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/publications/glumarker.png" width="200" height="120">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://ieeexplore.ieee.org/document/10782165" target="_blank" style="color:#4169E1; text-decoration: none;">
-                <papertitle>GluMarker: A Novel Predictive Modeling of Glycemic Control Through Digital Biomarkers</papertitle>
-              </a>
-              <br>
-              Ziyi Zhou<sup>*</sup>, Ming Cheng<sup>*</sup>, <strong>Xingjian Diao</strong><sup>*</sup>, Yanjun Cui, Xiangling Li
-              <br>
-              <em>Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)</em>, 2024 <font color="#E55C5C"><strong>(Lecture Presentation)</strong></font>
-              <br>
-              <span style="color: gold; font-size: 24px;">&#x1F396; </span> <span style="color: 	#DAA520; font-size: 15px;"> IEEE EMBC NextGen Scholar Award</span>
-            </td>
-          </tr>
+      <!-- LLM Design Choices -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/Curriculum.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://arxiv.org/pdf/2510.19099" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>What Makes a Good Curriculum? Disentangling the Effects of Data Ordering on LLM Mathematical Reasoning</papertitle>
+          </a>
+          <br>
+          Yaning Jia, Chunhui Zhang, <strong>Xingjian Diao</strong>, Xiangchi Yuan, Zhongyu Ouyang, Chiyu Ma, Soroush Vosoughi
+          <br>
+          <em>arXiv Preprint</em>, 2025
+        </td>
+      </tr>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/publications/JBHI.png" width="200" height="120">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://ieeexplore.ieee.org/document/10124956" target="_blank" style="color:#4169E1; text-decoration: none;">
-                <papertitle>An End-to-End Energy-Efficient Approach for Intake Detection With Low Inference Time Using Wrist-Worn Sensor</papertitle>
-              </a>
-              <br>
-              Boyang Wei, Shibo Zhang, <strong>Xingjian Diao</strong>, Qiuyang Xu, Yang Gao, Nabil Alshurafa
-              <br>
-              <em>IEEE Journal of Biomedical and Health Informatics (JBHI)</em>, 2023
-            </td>
-          </tr>
+      <!-- LLM Design Choices -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/LLMs_Design_Choices.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://d197for5662m48.cloudfront.net/documents/publicationstatus/264594/preprint_pdf/b9443b42f8c0c3cc6b063e558c77b48d.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>On The Design Choices of Next Level LLMs</papertitle>
+          </a>
+          <br>
+          Yijun Tian, <strong>Xingjian Diao</strong>, Ming Cheng, Chunhui Zhang, Jiang Gui, Soroush Vosoughi, Xiangliang Zhang, Nitesh V. Chawla, Shichao Pei
+          <br>
+          <em>Authorea Preprints</em>, 2025
+        </td>
+      </tr>
 
-        </tbody></table>
-          
-      </div>
+      <!-- AlphaExpert -->
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/publications/AlphaExpert_emnlp24.png" width="200" height="120">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://aclanthology.org/2024.emnlp-main.1141.pdf" target="_blank" style="color:#4169E1; text-decoration: none;">
+            <papertitle>AlphaExpert: Assigning LoRA Experts Based on Layer Training Quality</papertitle>
+          </a>
+          <br>
+          Peijun Qing, Chongyang Gao, Yefan Zhou, <strong>Xingjian Diao</strong>, Yaoqing Yang, Soroush Vosoughi
+          <br>
+          <em>Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
     </section>
 
 
