@@ -65,7 +65,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
 .showcase-left-desc{font-size:26px; color:#b2b2b2;}
 .showcase-right td{font-size:16px;}
 
-/* ============= News Card List ============= */
+/* ============= News (Neutral Card Style) ============= */
 #News .news-list{list-style:none; margin:0; padding:0;}
 #News .news-item{
   margin-bottom:14px;
@@ -78,42 +78,51 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
 #News .news-date{color:#6b6b6b; font-size:14px; margin-bottom:3px;}
 #News .news-text{color:#333;}
 
-/* ============= Contact (Desktop Fix) ============= */
+/* ============= Contact (Desktop/Desktop) ============= */
 #Contact .showcase-right {
   display:flex;
   justify-content:flex-start;
   align-items:flex-start;
 }
-
-#Contact .contact-ul {
-  padding-left:0;
-  margin-top:10px;
-}
-
+#Contact .contact-ul {padding-left:0; margin-top:10px;}
 #Contact .contact-item {
   display:flex;
   align-items:center;
   margin:14px 0;
 }
-
 #Contact .contact-svg {
   width:28px !important;
   height:28px !important;
   margin-right:12px !important;
   flex-shrink:0;
 }
-
 #Contact .contact-item a {
   font-size:18px;
   color:#4169E1;
   text-decoration:none;
   word-break:break-word;
 }
+#Contact .contact-item a:hover {text-decoration:underline;}
 
-#Contact .contact-item a:hover { text-decoration:underline; }
+/* ============= Services (Clean Academic Style) ============= */
+#Services .service-title {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#444;
+}
+#Services .service-list {
+  margin:0;
+  padding-left:18px;
+  line-height:1.55;
+  font-size:16px;
+  color:#333;
+}
+#Services .service-list li {margin-bottom:3px;}
 
 /* ============= Mobile ≤ 900px ============= */
 @media (max-width:900px){
+
   .nav1-show{display:none;}
   .nav2-show{display:flex;}
   .mobile-nav{display:flex; justify-content:center; flex-wrap:wrap; padding: calc(var(--nav-h) + 20px) 26px 0;}
@@ -132,7 +141,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
   .showcase-left{width:100%; text-align:center; align-items:center;}
   .showcase-right{width:100%; padding-top:16px;}
 
-  /* Publications mobile card layout */
+  /* Publications mobile → card layout */
   #Publications table tr{
     display:block;
     margin-bottom:26px;
@@ -152,12 +161,44 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
     margin-bottom:10px;
   }
 
-  /* Contact mobile */
+  /* Projects mobile → card layout (NEW, important) */
+  #Projects table tr{
+    display:block;
+    margin-bottom:28px;
+    padding-bottom:20px;
+    border-bottom:1px solid #e6e6e6;
+  }
+  #Projects table td{
+    display:block;
+    width:100% !important;
+    padding:6px 0 !important;
+    text-align:left !important;
+  }
+  #Projects img{
+    width:100% !important;
+    height:auto !important;
+    border-radius:8px;
+    margin-bottom:10px;
+  }
+  #Projects papertitle,
+  #Projects strong{
+    font-size:18px;
+    display:block;
+    margin-bottom:6px;
+    color:#1b6535;
+  }
+  #Projects p{
+    font-size:15px;
+    line-height:1.55;
+    color:#444;
+  }
+
+  /* Contact Mobile */
   #Contact .showcase-right{width:100%; padding-top:12px;}
   #Contact .contact-item{margin:10px 0;}
   #Contact .contact-svg{width:22px !important; height:22px !important;}
   #Contact .contact-item a{font-size:16px;}
 }
 
-/* Footer */
+/* ============= Footer ============= */
 footer{text-align:center; margin:20px; color:#8b9596;}
