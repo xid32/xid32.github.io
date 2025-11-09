@@ -4,7 +4,7 @@ ul,li{list-style:none;}
 :root{
   --nav-h:70px;
   --page-hpad-desktop:90px;
-  --section-vspace:36px; /* 可调：24/32/36/40 */
+  --section-vspace:36px;
 }
 
 /* ============= Nav ============= */
@@ -25,10 +25,10 @@ nav a:hover{color:#4294e5;}
 html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 14px);}
 section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
 
-/* ============= Header / Hero (About) ============= */
+/* ============= Header (About) ============= */
 .body{
   display:flex;
-  padding: calc(var(--nav-h) + 20px) var(--page-hpad-desktop) 0; /* 顶部让出导航位 */
+  padding: calc(var(--nav-h) + 20px) var(--page-hpad-desktop) 0;
 }
 .body .left{width:30vw; display:flex; flex-direction:column; align-items:center;}
 .body .right{width:70vw; margin-top:50px; padding-bottom:var(--section-vspace);}
@@ -37,16 +37,13 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
   background:url('./head.jpeg'); background-size:100% 100%;
   width:200px; height:200px; border-radius:100px; margin:40px 0 12px;
 }
-.name{font-size:22px; margin:0 0 8px; line-height:1.1;}
+.name{font-size:22px; margin:0 0 8px;}
 .icon{display:flex; justify-content:center; gap:10px;}
-.icon-item{cursor:pointer; padding:2px;}
 .icon-item img{width:25px; height:25px;}
-
 .biography-title{font-size:32px; font-weight:normal;}
 .biography{font-size:18px; margin-bottom:30px;}
 
-/* ============= Showcase（通用区块） ============= */
-/* 统一页面左右留白、区块底部留白 */
+/* ============= Showcase Sections ============= */
 .showcase{
   display:flex;
   padding: 0 var(--page-hpad-desktop);
@@ -55,111 +52,112 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
 .showcase:nth-of-type(2n+1){background:#f7f7f7;}
 .showcase:nth-of-type(2n){background:#fff;}
 
-/* 左/右栏 */
 .showcase-left{
   width:30vw;
   padding-top: var(--section-vspace);
-  display:flex; flex-direction:column; align-items:flex-start; /* 桌面靠左 */
+  display:flex; flex-direction:column; align-items:flex-start;
 }
 .showcase-right{
   width:70vw;
   padding-top: var(--section-vspace);
 }
-.showcase-left-title{font-size:35px;}
+.showcase-left-title{font-size:35px; color:#1b6535;}
 .showcase-left-desc{font-size:26px; color:#b2b2b2;}
 .showcase-right td{font-size:16px;}
 
-/* 其它通用排版（保留你的样式） */
-.showcase-desc{padding:20px; background:#fff; box-shadow:0 0 10px #c5c2c2; margin-bottom:20px;}
-.showcase-desc-img{width:100vw;}
-.showcase-title{font-size:34px;}
-.showcase-content{font-size:22px;}
-.desc-name{color:#4371a1; font-size:22px;}
-.desc-date{color:#45962b; font-size:22px;}
-.tag{display:flex;}
-.tag-item{font-size:14px; padding:0 4px; color:#4294e5; border:2px solid #4294e5; border-radius:5px; margin-right:8px;}
-.tag-item:hover{color:#fff; background:#4294e5;}
-.teaching-title{font-size:26px; margin:30px 0 15px;}
-.teaching-title:first-child{margin-top:0;}
-.teaching, .teaching-item{font-size:22px; list-style:disc; margin-left:20px;}
-.experience-desc{font-size:20px;}
-.experience-ul{margin:20px 0;}
-.experience-item{list-style:disc; margin-left:40px;}
-.contact-ul{font-size:26px;}
-.contact-item{display:flex; align-items:center; margin:20px;}
-.contact-svg{width:30px; height:30px; margin-right:20px;}
-.experience-svg{width:50px; height:50px; margin-right:20px;}
-footer{text-align:center; margin:20px; color:#8b9596;}
-.contact-ul a{text-decoration:none; color:#4294e5;}
-#main{z-index:10;}
-.experience-title{font-weight:bold; font-size:30px;}
-.experience-title-desc{font-weight:bold; font-size:24px;}
-.experience-title-italic{font-size:18px; font-style:italic;}
-.showcase-svg{width:20px; height:20px; position:absolute; right:0;}
-.project-title{font-size:30px; margin-bottom:40px;}
-.project-ul{display:flex;}
-.project-li{width:500px; margin-right:30px;}
-.view-more{background:#4294e5; font-size:16px; color:#fff; padding:5px 10px; border:none; border-radius:5px; margin:20px 40px; float:right;}
+/* ============= News Card List ============= */
+#News .news-list{list-style:none; margin:0; padding:0;}
+#News .news-item{
+  margin-bottom:14px;
+  padding:10px 14px;
+  border-radius:8px;
+  background:#fafafa;
+  transition:background .2s ease;
+}
+#News .news-item:hover{background:#f2f2f2;}
+#News .news-date{color:#6b6b6b; font-size:14px; margin-bottom:3px;}
+#News .news-text{color:#333;}
 
-/* ============= News（简洁学术风列表） ============= */
-#News .news-plain{list-style:none; margin:0; padding:0; font-size:16px; line-height:1.55;}
-#News .news-plain li{display:flex; align-items:flex-start; padding:6px 0; border-bottom:1px solid #e6e6e6;}
-#News .news-plain li:last-child{border-bottom:0;}
-#News .news-plain .date{font-weight:700; color:#1b6535; white-space:nowrap; margin-right:14px;}
+/* ============= Contact (Desktop Fix) ============= */
+#Contact .showcase-right {
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
 
-/* ============= Mobile ≤ 900px（唯一一处） ============= */
+#Contact .contact-ul {
+  padding-left:0;
+  margin-top:10px;
+}
+
+#Contact .contact-item {
+  display:flex;
+  align-items:center;
+  margin:14px 0;
+}
+
+#Contact .contact-svg {
+  width:28px !important;
+  height:28px !important;
+  margin-right:12px !important;
+  flex-shrink:0;
+}
+
+#Contact .contact-item a {
+  font-size:18px;
+  color:#4169E1;
+  text-decoration:none;
+  word-break:break-word;
+}
+
+#Contact .contact-item a:hover { text-decoration:underline; }
+
+/* ============= Mobile ≤ 900px ============= */
 @media (max-width:900px){
-  /* 顶部：显示简版导航与移动菜单 */
   .nav1-show{display:none;}
   .nav2-show{display:flex;}
-  .nav2-show a{margin-right:10px;}
   .mobile-nav{display:flex; justify-content:center; flex-wrap:wrap; padding: calc(var(--nav-h) + 20px) 26px 0;}
 
   html{scroll-padding-top:80px;}
   section[id]{scroll-margin-top:80px;}
 
-  /* Header 区域改为纵向并缩小内边距 */
   .body{display:block; padding:30px 20px 0;}
-  .body .left{width:100%; align-items:center;}
-  .body .right{width:100%; margin-top:50px; padding-bottom:var(--section-vspace);}
-  .head-img{margin:30px 0 10px;}
-  .name{font-size:30px; margin:0 0 6px;}
-  .biography-title{font-size:50px; font-weight:normal; text-align:center; margin-bottom:10px;}
-  .biography{padding:0 20px; font-size:18px; margin-bottom:30px;}
+  .body .left{width:100%;}
+  .body .right{width:100%; margin-top:50px;}
 
-  /* Showcase 统一纵向 + 居中 + 两侧留白 */
-  .showcase{
+  .biography-title{text-align:center; font-size:42px;}
+  .biography{padding:0 20px;}
+
+  .showcase{display:block; padding:0 14px 24px;}
+  .showcase-left{width:100%; text-align:center; align-items:center;}
+  .showcase-right{width:100%; padding-top:16px;}
+
+  /* Publications mobile card layout */
+  #Publications table tr{
     display:block;
-    padding: 0 12px 24px; /* 左右不再贴边，底部留点空 */
+    margin-bottom:26px;
+    padding-bottom:18px;
+    border-bottom:1px solid #e6e6e6;
   }
-  .showcase-left{
-    width:100%;
-    padding:16px 0 0;
-    display:flex; flex-direction:column; align-items:center; text-align:center;
+  #Publications table td{
+    display:block;
+    width:100% !important;
+    padding:6px 0 !important;
+    text-align:left !important;
   }
-  .showcase-right{
-    width:100%;
-    padding:10px 0 0;
-    box-sizing:border-box;
+  #Publications img{
+    width:100% !important;
+    height:auto !important;
+    border-radius:8px;
+    margin-bottom:10px;
   }
 
-  /* 表格/文字尺寸微调 */
-  .showcase-title{font-size:22px;}
-  .desc-name,.desc-date{font-size:18px;}
-  .contact-ul{font-size:18px;}
-  .contact-item{margin:10px;}
-  .contact-svg{width:18px; height:18px; margin-right:10px;}
-  .experience-svg{width:30px; height:30px; margin-right:6px;}
-  footer{font-size:12px;}
-  #main{width:300px !important; height:500px !important;}
-
-  .project-title{font-size:22px; text-align:center; margin-bottom:40px; padding-top:50px; border-top:1px solid #000;}
-  .project-ul{display:block; margin-left:0; padding:0 0 30px;}
-  .project-li{width:100%; padding:20px; box-sizing:border-box; margin:0;}
-  .project-ul img{display:block; margin:0 auto; height:200px !important;}
-
-  .time,.school{width:70vw; text-wrap:wrap;}
-
-  /* News 列表在手机端的字号/行距微调 */
-  #News .news-plain li{font-size:15px; line-height:1.4;}
+  /* Contact mobile */
+  #Contact .showcase-right{width:100%; padding-top:12px;}
+  #Contact .contact-item{margin:10px 0;}
+  #Contact .contact-svg{width:22px !important; height:22px !important;}
+  #Contact .contact-item a{font-size:16px;}
 }
+
+/* Footer */
+footer{text-align:center; margin:20px; color:#8b9596;}
