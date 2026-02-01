@@ -162,32 +162,32 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
   }
 
   /* Projects mobile → card layout (NEW, important) */
-  #Projects table tr{
+  #Tools table tr{
     display:block;
     margin-bottom:28px;
     padding-bottom:20px;
     border-bottom:1px solid #e6e6e6;
   }
-  #Projects table td{
+  #Tools table td{
     display:block;
     width:100% !important;
     padding:6px 0 !important;
     text-align:left !important;
   }
-  #Projects img{
+  #Tools img{
     width:100% !important;
     height:auto !important;
     border-radius:8px;
     margin-bottom:10px;
   }
-  #Projects papertitle,
-  #Projects strong{
+  #Tools papertitle,
+  #Tools strong{
     font-size:18px;
     display:block;
     margin-bottom:6px;
     color:#1b6535;
   }
-  #Projects p{
+  #Tools p{
     font-size:15px;
     line-height:1.55;
     color:#444;
