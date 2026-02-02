@@ -1,6 +1,11 @@
 /* ============= Base & Vars ============= */
 *{margin:0;padding:0;}
 ul,li{list-style:none;}
+
+html, body{
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 :root{
   --nav-h:70px;
   --page-hpad-desktop:90px;
