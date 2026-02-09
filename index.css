@@ -80,8 +80,63 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
   transition:background .2s ease;
 }
 #News .news-item:hover{background:#f2f2f2;}
-#News .news-date{color:#6b6b6b; font-size:14px; margin-bottom:3px;}
+#News .news-date{
+  color:#6b6b6b;
+  font-size:14px;
+  margin-bottom:4px;   /* 原来是 3px，太挤了 */
+  display:block;
+}
 #News .news-text{color:#333;}
+
+/* NEW: accent text (replaces inline style) */
+#News .news-accent{
+  color:#E55C5C;
+}
+
+/* NEW: Show more / details (minimal, not ugly) */
+#News .news-more{
+  margin-top:6px;
+}
+
+#News .news-more-summary{
+  cursor:pointer;
+  color:#4169E1;
+  font-size:14px;
+  list-style:none; /* helps in some browsers */
+  outline:none;
+}
+
+/* Remove default marker in Chrome/Safari, keep clean */
+#News .news-more-summary::-webkit-details-marker{
+  display:none;
+}
+
+/* Optional: add a subtle caret using text only (no icons) */
+#News .news-more-summary::after{
+  content:" ▾";
+  font-size:12px;
+  color:#6b6b6b;
+}
+
+#News .news-more[open] .news-more-summary::after{
+  content:" ▴";
+}
+
+/* ===== News: Show more -> Show less when expanded (CSS only) ===== */
+#News .news-more[open] .news-more-summary{
+  font-size:0; /* hide original "Show more" text */
+}
+
+#News .news-more[open] .news-more-summary::before{
+  content:"Show less";
+  font-size:14px; /* restore readable size */
+  color:#4169E1;
+}
+
+
+#News .news-list-older{
+  margin-top:10px;
+}
 
 /* ============= Contact (Desktop/Desktop) ============= */
 #Contact .showcase-right {
