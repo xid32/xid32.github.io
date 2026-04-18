@@ -29,11 +29,11 @@
   --card:        #ffffff;
   --card-hover:  #fafafa;
 
-  --accent:         #2f5f3a;  /* dartmouth-esque deep green, slightly muted */
-  --accent-deep:    #1f4428;
+  --accent:         #3d9154;  /* vivid, clearly readable green */
+  --accent-deep:    #2f7a43;  /* used for headings, slightly deeper but still clearly green */
   --accent-soft:    #e8efe9;
-  --link:           #2f5f8a;  /* calm navy-blue instead of royal blue */
-  --link-hover:     #1e4466;
+  --link:           #4169E1;  /* classic royal blue — matches original html */
+  --link-hover:     #2952c7;
   --highlight:      #b84a3f;  /* softer red accent for awards/orals */
 
   /* Shadow */
@@ -51,6 +51,7 @@ html, body{
   background: var(--bg);
   font-size: 17px;
   line-height: 1.65;
+  font-weight: 450;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -448,7 +449,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   display: inline;
   font-family: var(--font-serif);
   font-size: 17.5px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink);
   line-height: 1.4;
 }
@@ -466,6 +467,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   font-size: 15.5px;
   color: var(--ink-soft);
   line-height: 1.6;
+  font-weight: 450;
 }
 #Publication td em{
   font-family: var(--font-serif);
@@ -476,8 +478,8 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 
 /* Tool: papertitle not a link but still should look refined */
 #Tool papertitle{
-  color: var(--accent-deep) !important;
-  font-weight: 600;
+  color: var(--link) !important;
+  font-weight: 500;
 }
 #Tool p{
   font-size: 15px;
@@ -658,7 +660,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 17px;
-  color: var(--accent-deep);
+  color: var(--ink);
   display: inline-block;
   margin-bottom: 2px;
 }
@@ -714,7 +716,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.3px;
-  color: var(--accent-deep);
+  color: var(--ink);
   text-align: left;
 }
 
