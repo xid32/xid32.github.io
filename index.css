@@ -22,12 +22,12 @@
   --ink-soft:    #3a3f46;    /* secondary text */
   --ink-muted:   #6b7280;    /* meta / dates */
   --ink-faint:   #9aa1aa;    /* hairline labels */
-  --rule:        #e8e6e1;    /* dividers */
-  --rule-soft:   #f0ede7;
-  --bg:          #fbfaf7;    /* paper-like background */
-  --bg-alt:      #f5f3ed;    /* alternating band */
+  --rule:        #eaeaea;    /* dividers */
+  --rule-soft:   #f0f0f0;
+  --bg:          #ffffff;    /* pure white background */
+  --bg-alt:      #ffffff;    /* same as bg — no alternating band */
   --card:        #ffffff;
-  --card-hover:  #f8f6f1;
+  --card-hover:  #fafafa;
 
   --accent:         #2f5f3a;  /* dartmouth-esque deep green, slightly muted */
   --accent-deep:    #1f4428;
