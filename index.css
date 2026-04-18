@@ -1,264 +1,965 @@
-/* ============= Base & Vars ============= */
-*{margin:0;padding:0;}
-ul,li{list-style:none;}
+/* ==========================================================
+   Xingjian Diao — Academic Homepage
+   Refined academic theme · serif-forward · generous whitespace
+   ========================================================== */
 
-html, body{
-  font-family: serif;
-}
+/* ---------- Typography & Color Tokens ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
-  --nav-h:70px;
-  --page-hpad-desktop:90px;
-  --section-vspace:36px;
+  /* Layout */
+  --nav-h: 68px;
+  --page-hpad-desktop: 96px;
+  --section-vspace: 56px;
+  --content-max: 1240px;
+
+  /* Type */
+  --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Palette — soft, refined academic */
+  --ink:         #1f2328;    /* primary text */
+  --ink-soft:    #3a3f46;    /* secondary text */
+  --ink-muted:   #6b7280;    /* meta / dates */
+  --ink-faint:   #9aa1aa;    /* hairline labels */
+  --rule:        #e8e6e1;    /* dividers */
+  --rule-soft:   #f0ede7;
+  --bg:          #fbfaf7;    /* paper-like background */
+  --bg-alt:      #f5f3ed;    /* alternating band */
+  --card:        #ffffff;
+  --card-hover:  #f8f6f1;
+
+  --accent:         #2f5f3a;  /* dartmouth-esque deep green, slightly muted */
+  --accent-deep:    #1f4428;
+  --accent-soft:    #e8efe9;
+  --link:           #2f5f8a;  /* calm navy-blue instead of royal blue */
+  --link-hover:     #1e4466;
+  --highlight:      #b84a3f;  /* softer red accent for awards/orals */
+
+  /* Shadow */
+  --shadow-nav: 0 1px 0 rgba(20,20,20,0.04), 0 6px 20px -12px rgba(20,20,20,0.10);
+  --shadow-card: 0 1px 2px rgba(20,20,20,0.04);
 }
 
-/* ============= Nav ============= */
-.nav1-show{display:flex;}
-.nav2-show{display:none;}
+/* ---------- Reset & Base ---------- */
+*{ margin:0; padding:0; box-sizing:border-box; }
+ul,li{ list-style:none; }
+
+html, body{
+  font-family: var(--font-serif);
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a{ color: var(--link); text-decoration: none; transition: color .15s ease; }
+a:hover{ color: var(--link-hover); }
+
+strong{ font-weight: 600; color: var(--ink); }
+em{ color: var(--ink-soft); }
+
+/* ---------- Navigation ---------- */
+.nav1-show{ display:flex; }
+.nav2-show{ display:none; }
+
 nav{
-  position:fixed; inset:0 0 auto 0; height:var(--nav-h);
-  display:flex; justify-content:space-around; align-items:center;
-  width:100vw; background:#fff; box-shadow:0 5px 5px #c5c2c2; z-index:9999;
+  position: fixed; inset: 0 0 auto 0;
+  height: var(--nav-h);
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100vw;
+  padding: 0 var(--page-hpad-desktop);
+  background: rgba(251,250,247,0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: var(--shadow-nav);
+  z-index: 9999;
 }
-.nav-ul{display:flex;}
-.mobile-nav{display:none;}
-.nav-item{margin-right:20px;}
-nav a{font-weight:600; text-decoration:none; color:#000;}
-nav a:hover{color:#4294e5;}
 
-/* ============= Anchor offset ============= */
-html{scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 14px);}
-section[id]{scroll-margin-top:calc(var(--nav-h) + 14px);}
+nav .title{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 0.1px;
+  color: var(--ink);
+}
 
-/* ============= Header (About) ============= */
+.nav-ul{ display:flex; gap: 4px; }
+.mobile-nav{ display:none; }
+
+.nav-item{ margin: 0; }
+.nav-item a{
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14.5px;
+  letter-spacing: 0.2px;
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background .18s ease, color .18s ease;
+}
+.nav-item a:hover{
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ---------- Anchor offset ---------- */
+html{ scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
+section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
+
+/* ========================================================
+   Header / About
+   ======================================================== */
 .body{
-  display:flex;
-  padding: calc(var(--nav-h) + 20px) var(--page-hpad-desktop) 0;
+  display: flex;
+  gap: 56px;
+  align-items: center;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 56px) var(--page-hpad-desktop) 40px;
 }
-.body .left{width:30vw; display:flex; flex-direction:column; align-items:center;}
-.body .right{width:70vw; margin-top:50px; padding-bottom:var(--section-vspace);}
+
+.body .left{
+  width: 28%;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+.body .right{
+  width: 72%;
+  padding-bottom: 0;
+}
 
 .head-img{
-  background:url('./head.jpeg'); background-size:100% 100%;
-  width:200px; height:200px; border-radius:100px; margin:40px 0 12px;
+  background: url('./head.jpeg') center/cover no-repeat;
+  width: 210px; height: 210px;
+  border-radius: 50%;
+  margin: 0 0 20px;
+  box-shadow:
+    0 0 0 1px var(--rule),
+    0 0 0 6px var(--bg),
+    0 12px 40px -12px rgba(30,40,30,0.22);
+  transition: transform .4s ease;
 }
-.name{font-size:22px; margin:0 0 8px;}
-.icon{display:flex; justify-content:center; gap:10px;}
-.icon-item img{width:25px; height:25px;}
-.biography-title{font-size:32px; font-weight:normal;}
-.biography{font-size:18px; margin-bottom:30px;}
+.head-img:hover{ transform: translateY(-2px); }
 
-/* ============= Showcase Sections ============= */
-.showcase{
-  display:flex;
-  padding: 0 var(--page-hpad-desktop);
-  padding-bottom: var(--section-vspace);
+.name{
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--ink);
+  margin: 0 0 14px;
+  text-align: center;
 }
-.showcase:nth-of-type(2n+1){background:#f7f7f7;}
-.showcase:nth-of-type(2n){background:#fff;}
+
+.icon{
+  display: flex; justify-content: center; gap: 14px;
+  margin-top: 4px;
+}
+.icon-item{
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.icon-item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -8px rgba(30,40,30,0.25);
+  border-color: var(--accent);
+}
+.icon-item img{
+  width: 20px; height: 20px;
+  object-fit: contain;
+}
+
+.biography-title{
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.biography{
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-top: 22px;
+  margin-bottom: 10px;
+  max-width: 780px;
+}
+
+/* Neutralize the double <br> sitting between the title and bio in the HTML */
+.biography-title + br,
+.biography-title + br + br{
+  display: none;
+}
+.biography p{ margin-bottom: 14px; }
+.biography strong{ color: var(--ink); font-weight: 600; }
+.biography a{ color: var(--link); border-bottom: 1px solid transparent; transition: border-color .15s ease; }
+.biography a:hover{ border-bottom-color: var(--link-hover); }
+.biography img{ vertical-align: middle; margin: 0 1px; }
+
+/* ========================================================
+   Showcase Sections
+   ======================================================== */
+.showcase{
+  display: flex;
+  gap: 48px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--section-vspace) var(--page-hpad-desktop);
+  position: relative;
+}
+
+/* alternating background bands (full-bleed) */
+.showcase:nth-of-type(2n+1){ background: var(--bg); }
+.showcase:nth-of-type(2n){ background: var(--bg-alt); }
+.showcase{
+  max-width: none;
+  padding-left: max(var(--page-hpad-desktop), calc((100vw - var(--content-max)) / 2 + 40px));
+  padding-right: max(var(--page-hpad-desktop), calc((100vw - var(--content-max)) / 2 + 40px));
+}
+
+/* thin rule between sections */
+.showcase + .showcase::before,
+.body + .showcase::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2 * var(--page-hpad-desktop));
+  max-width: var(--content-max);
+  height: 1px;
+  background: var(--rule);
+}
 
 .showcase-left{
-  width:30vw;
-  padding-top: var(--section-vspace);
-  display:flex; flex-direction:column; align-items:flex-start;
+  width: 28%;
+  display: flex; flex-direction: column;
+  align-items: flex-start;
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  align-self: flex-start;
 }
 .showcase-right{
-  width:70vw;
-  padding-top: var(--section-vspace);
+  width: 72%;
 }
-.showcase-left-title{font-size:35px; color:#1b6535;}
-.showcase-left-desc{font-size:26px; color:#b2b2b2;}
-.showcase-right td{font-size:16px;}
 
-/* ============= News (Neutral Card Style) ============= */
-#News .news-list{list-style:none; margin:0; padding:0;}
+.showcase-left-title{
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--accent-deep);
+  line-height: 1.15;
+}
+.showcase-left-title::after{
+  content: "";
+  display: block;
+  width: 36px; height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+.showcase-left-desc{
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 16px;
+}
+
+.showcase-right td{
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+/* footnote in showcase-left */
+.footnote{
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   News
+   ======================================================== */
+#News .news-list{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 0;
+}
+
 #News .news-item{
-  margin-bottom:14px;
-  padding:10px 14px;
-  border-radius:8px;
-  background:#fafafa;
-  transition:background .2s ease;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: transparent;
+  border-left: 2px solid transparent;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
 }
-#News .news-item:hover{background:#f2f2f2;}
+#News .news-item:hover{
+  background: var(--card);
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow-card);
+}
+
 #News .news-date{
-  color:#6b6b6b;
-  font-size:14px;
-  margin-bottom:4px;   /* 原来是 3px，太挤了 */
-  display:block;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
 }
-#News .news-text{color:#333;}
 
-/* NEW: accent text (replaces inline style) */
+#News .news-text{
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
 #News .news-accent{
-  color:#E55C5C;
+  color: var(--highlight);
+  font-weight: 600;
 }
 
-/* NEW: Show more / details (minimal, not ugly) */
-#News .news-more{
-  margin-top:6px;
-}
-
+#News .news-more{ margin-top: 18px; padding-left: 18px; }
 #News .news-more-summary{
-  cursor:pointer;
-  color:#4169E1;
-  font-size:14px;
-  list-style:none; /* helps in some browsers */
-  outline:none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--link);
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--card);
+  list-style: none;
+  outline: none;
+  transition: all .2s ease;
 }
-
-/* Remove default marker in Chrome/Safari, keep clean */
-#News .news-more-summary::-webkit-details-marker{
-  display:none;
+#News .news-more-summary:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
-
-/* Optional: add a subtle caret using text only (no icons) */
+#News .news-more-summary::-webkit-details-marker{ display:none; }
 #News .news-more-summary::after{
-  content:" ▾";
-  font-size:12px;
-  color:#6b6b6b;
+  content: " ↓";
+  font-size: 12px;
+  opacity: 0.7;
 }
-
-#News .news-more[open] .news-more-summary::after{
-  content:" ▴";
-}
-
-/* ===== News: Show more -> Show less when expanded (CSS only) ===== */
-#News .news-more[open] .news-more-summary{
-  font-size:0; /* hide original "Show more" text */
-}
-
+#News .news-more[open] .news-more-summary::after{ content: " ↑"; }
+#News .news-more[open] .news-more-summary{ font-size: 0; }
 #News .news-more[open] .news-more-summary::before{
-  content:"Show less";
-  font-size:14px; /* restore readable size */
-  color:#4169E1;
+  content: "Show less";
+  font-size: 13px;
 }
 
+#News .news-list-older{ margin-top: 14px; }
 
-#News .news-list-older{
-  margin-top:10px;
+/* ========================================================
+   Publications & Tool — shared card table styling
+   ======================================================== */
+#Publication h3,
+#Publication .section-heading{
+  font-family: var(--font-serif) !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  color: var(--accent-deep) !important;
+  letter-spacing: 0.1px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 6px !important;
+}
+#Publication h3 a{
+  font-family: var(--font-sans) !important;
+  font-weight: 500 !important;
+  color: var(--link) !important;
+  opacity: 1 !important;
 }
 
-/* ============= Contact (Desktop/Desktop) ============= */
-#Contact .showcase-right {
-  display:flex;
-  justify-content:flex-start;
-  align-items:flex-start;
+#Publication table,
+#Tool table{
+  border-spacing: 0;
+  border-collapse: separate;
+  width: 100%;
 }
-#Contact .contact-ul {padding-left:0; margin-top:10px;}
-#Contact .contact-item {
-  display:flex;
-  align-items:center;
-  margin:14px 0;
+
+#Publication tr,
+#Tool tr{
+  transition: background .2s ease;
 }
-#Contact .contact-svg {
-  width:28px !important;
-  height:28px !important;
-  margin-right:12px !important;
-  flex-shrink:0;
+#Publication tr:hover,
+#Tool tr:hover{
+  background: var(--card-hover);
 }
-#Contact .contact-item a {
-  font-size:18px;
-  color:#4169E1;
-  text-decoration:none;
-  word-break:break-word;
+
+#Publication td,
+#Tool td{
+  padding: 18px 16px !important;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--rule);
 }
-#Contact .contact-item a:hover {text-decoration:underline;}
 
-/* ============= Services (Clean Academic Style) ============= */
-#Service .service-title {
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:14px;
-  color:#444;
+#Publication tr:last-child td,
+#Tool tr:last-child td{
+  border-bottom: none;
 }
-#Service .service-list {
-  margin:0;
-  padding-left:18px;
-  line-height:1.55;
-  font-size:16px;
-  color:#333;
+
+#Publication img,
+#Tool img{
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(20,20,20,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-#Service .service-list li {margin-bottom:3px;}
+#Publication tr:hover img,
+#Tool tr:hover img{
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(20,20,20,0.12);
+}
 
-/* ============= Mobile ≤ 900px ============= */
-@media (max-width:900px){
+/* paper title */
+#Publication papertitle,
+#Tool papertitle{
+  display: inline;
+  font-family: var(--font-serif);
+  font-size: 17.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+#Publication a papertitle{
+  color: var(--link);
+  transition: color .15s ease;
+}
+#Publication a:hover papertitle{ color: var(--link-hover); }
 
-  .nav1-show{display:none;}
-  .nav2-show{display:flex;}
-  .mobile-nav{display:flex; justify-content:center; flex-wrap:wrap; padding: calc(var(--nav-h) + 20px) 26px 0;}
+#Publication td a{ color: var(--link); }
 
-  html{scroll-padding-top:80px;}
-  section[id]{scroll-margin-top:80px;}
+/* author line + venue */
+#Publication td,
+#Tool td{
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+#Publication td em{
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+#Publication sup{ font-size: 10px; color: var(--highlight); }
 
-  .body{display:block; padding:30px 20px 0;}
-  .body .left{width:100%;}
-  .body .right{width:100%; margin-top:50px;}
+/* Tool: papertitle not a link but still should look refined */
+#Tool papertitle{
+  color: var(--accent-deep) !important;
+  font-weight: 600;
+}
+#Tool p{
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-top: 6px;
+}
 
-  .biography-title{text-align:center; font-size:42px;}
-  .biography{padding:0 20px;}
+/* ---------- Publication: Expandable Abstract ---------- */
+#Publication .pub-abstract{
+  margin-top: 10px;
+  border-radius: 4px;
+}
 
-  .showcase{display:block; padding:0 14px 24px;}
-  .showcase-left{width:100%; text-align:center; align-items:center;}
-  .showcase-right{width:100%; padding-top:16px;}
+#Publication .pub-abstract-summary{
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  list-style: none;
+  outline: none;
+  transition: color .2s ease;
+  user-select: none;
+}
+#Publication .pub-abstract-summary:hover{
+  color: var(--accent);
+}
+#Publication .pub-abstract-summary::-webkit-details-marker{ display: none; }
+#Publication .pub-abstract-summary::before{
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform .2s ease;
+  color: var(--ink-faint);
+}
+#Publication .pub-abstract[open] .pub-abstract-summary::before{
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+#Publication .pub-abstract[open] .pub-abstract-summary{
+  color: var(--accent);
+}
+
+#Publication .pub-abstract-body{
+  margin-top: 8px;
+  padding: 12px 0 2px 16px;
+  border-left: 2px solid var(--accent-soft);
+  font-family: var(--font-serif);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  animation: fadeSlide .25s ease;
+}
+#Publication .pub-abstract-body a{
+  color: var(--link);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+#Publication .pub-abstract-body a:hover{
+  border-bottom-color: var(--link);
+}
+
+#Publication .pub-tags{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+#Publication .pub-tag{
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  background: transparent;
+  padding: 2px 0;
+  border-radius: 0;
+  border: none;
+  position: relative;
+}
+#Publication .pub-tag + .pub-tag::before{
+  content: "·";
+  color: var(--ink-faint);
+  margin-right: 8px;
+  margin-left: -4px;
+}
+
+@keyframes fadeSlide{
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================
+   Experience
+   ======================================================== */
+#Experience table{ border-spacing: 0; border-collapse: separate; width: 100%; }
+#Experience tr{ transition: background .2s ease; }
+#Experience tr:hover{ background: var(--card-hover); }
+
+#Experience td{
+  padding: 22px 18px !important;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+#Experience tr:last-child td{ border-bottom: none; }
+
+#Experience img{
+  max-width: 110px;
+  height: auto;
+  filter: grayscale(10%);
+  transition: filter .25s ease, transform .25s ease;
+}
+#Experience tr:hover img{
+  filter: none;
+  transform: scale(1.03);
+}
+
+#Experience td a{
+  color: inherit;
+  text-decoration: none;
+}
+#Experience td strong{
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--accent-deep);
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+/* ========================================================
+   Teaching
+   ======================================================== */
+#Teaching table{ border-spacing: 0; width: 100%; }
+#Teaching td{
+  padding: 22px 18px !important;
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  vertical-align: middle;
+}
+#Teaching td a{ color: var(--link); }
+#Teaching td a:hover{ color: var(--link-hover); }
+#Teaching img{
+  max-width: 110px;
+  filter: grayscale(10%);
+}
+
+/* ========================================================
+   Service — Reviewer / Program Committee
+   Responsive card grid
+   ======================================================== */
+#Service .service-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 14px;
+}
+
+#Service .service-card{
+  display: grid;
+  grid-template-columns: 78px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  background: transparent;
+  border: 1px solid var(--rule-soft);
+  border-radius: 8px;
+  transition: border-color .2s ease, background .2s ease, transform .15s ease;
+}
+#Service .service-card:hover{
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-1px);
+}
+
+#Service .service-abbr{
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: var(--accent-deep);
+  text-align: left;
+}
+
+#Service .service-full{
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  min-width: 0;
+}
+
+#Service .service-years{
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-muted);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Legacy selectors kept as harmless fallbacks */
+#Service td,
+#Service .service-title,
+#Service .service-list{ /* no-op, content moved to grid */ }
+
+/* ========================================================
+   Contact
+   ======================================================== */
+#Contact .showcase-right{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#Contact .contact-ul{
+  padding-left: 0;
+  margin-top: 6px;
+}
+#Contact .contact-item{
+  display: flex;
+  align-items: center;
+  margin: 14px 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--rule-soft);
+  transition: border-color .2s ease, background .2s ease, transform .15s ease;
+}
+#Contact .contact-item:hover{
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-1px);
+}
+#Contact .contact-svg{
+  width: 22px !important;
+  height: 22px !important;
+  margin-right: 14px !important;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+#Contact .contact-item a{
+  font-family: var(--font-sans);
+  font-size: 15.5px;
+  color: var(--ink);
+  font-weight: 500;
+  word-break: break-word;
+}
+#Contact .contact-item:hover a{ color: var(--accent); }
+
+/* ========================================================
+   Footer
+   ======================================================== */
+footer{
+  text-align: center;
+  padding: 32px 20px 28px;
+  margin-top: 20px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+footer a{
+  color: var(--link);
+  border-bottom: 1px dotted var(--ink-faint);
+  padding-bottom: 1px;
+}
+footer a:hover{ border-bottom-color: var(--link); }
+
+/* ========================================================
+   Inline hotfixes for old inline styles in HTML
+   (these elements exist in the source html; we soften them)
+   ======================================================== */
+[style*="#1b6535"]{ color: var(--accent-deep) !important; }
+[style*="#4169E1"]{ color: var(--link) !important; }
+font[color="#E55C5C"],
+font[color="#E55C5C"] strong{
+  color: var(--highlight) !important;
+  font-weight: 600;
+}
+
+/* ========================================================
+   Tablet / narrow desktop — 681-1100px
+   Keep two-column layout but tighten padding & constrain image sizes
+   so publication thumbnails stay small instead of ballooning.
+   ======================================================== */
+@media (max-width: 1100px){
+  :root{
+    --page-hpad-desktop: 40px;
+    --section-vspace: 44px;
+  }
+
+  .body{ gap: 36px; }
+  .body .left{ width: 30%; }
+  .body .right{ width: 70%; }
+  .head-img{ width: 180px; height: 180px; }
+  .biography-title{ font-size: 34px; }
+  .biography{ font-size: 16.5px; }
+
+  .showcase{ gap: 36px; }
+  .showcase-left{ width: 30%; }
+  .showcase-right{ width: 70%; }
+  .showcase-left-title{ font-size: 30px; }
+
+  /* Keep publication/tool thumbnails at a sane size */
+  #Publication img,
+  #Tool img{
+    width: 160px !important;
+    height: 96px !important;
+    object-fit: cover;
+  }
+  #Publication td:first-child,
+  #Tool td:first-child{
+    width: 180px !important;
+    padding: 14px 12px !important;
+  }
+  #Publication td,
+  #Tool td{
+    font-size: 14.5px !important;
+    padding: 14px 12px !important;
+  }
+  #Publication papertitle,
+  #Tool papertitle{ font-size: 16px; }
+  #Publication td em{ font-size: 14px; }
+
+  #Experience img,
+  #Teaching img{ max-width: 90px; }
+
+  /* Service grid: single column on narrow desktop */
+  #Service .service-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   Mobile — ≤ 680px
+   Full card-style rebuild: single column, stacked image + text
+   ======================================================== */
+@media (max-width: 680px){
+  :root{
+    --page-hpad-desktop: 22px;
+    --section-vspace: 36px;
+  }
+
+  .nav1-show{ display:none; }
+  .nav2-show{ display:flex; justify-content:center; padding: 0 20px; }
+
+  nav{ padding: 0 20px; }
+
+  .mobile-nav{
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 6px;
+    padding: calc(var(--nav-h) + 18px) 20px 0;
+  }
+  .mobile-nav .nav-item{
+    margin: 0;
+  }
+  .mobile-nav .nav-item a{
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent) !important;
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--card);
+    text-decoration: none !important;
+    display: inline-block;
+  }
+
+  html{ scroll-padding-top: 80px; }
+  section[id]{ scroll-margin-top: 80px; }
+
+  .body{
+    display: block;
+    padding: 30px 20px 10px;
+    gap: 0;
+  }
+  .body .left{ width: 100%; }
+  .body .right{ width: 100%; margin-top: 32px; }
+
+  .head-img{ width: 160px; height: 160px; }
+  .biography-title{
+    text-align: center;
+    font-size: 30px;
+    display: block;
+  }
+  .biography{ padding: 0 4px; font-size: 16px; }
+
+  .showcase{
+    display: block;
+    padding: 32px 20px;
+  }
+  .showcase-left{
+    width: 100%;
+    align-items: flex-start;
+    position: static;
+    margin-bottom: 20px;
+  }
+  .showcase-left-title{ font-size: 28px; }
+  .showcase-right{ width: 100%; padding-top: 4px; }
 
   /* Publications mobile → card layout */
-  #Publication table tr{
-    display:block;
-    margin-bottom:26px;
-    padding-bottom:18px;
-    border-bottom:1px solid #e6e6e6;
+  #Publication table tr,
+  #Tool table tr,
+  #Experience table tr,
+  #Teaching table tr{
+    display: block;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule);
   }
-  #Publication table td{
-    display:block;
-    width:100% !important;
-    padding:6px 0 !important;
-    text-align:left !important;
+  #Publication table td,
+  #Tool table td,
+  #Experience table td,
+  #Teaching table td{
+    display: block;
+    width: 100% !important;
+    padding: 6px 0 !important;
+    text-align: left !important;
+    border-bottom: none;
   }
-  #Publication img{
-    width:100% !important;
-    height:auto !important;
-    border-radius:8px;
-    margin-bottom:10px;
-  }
-
-  /* Projects mobile → card layout (NEW, important) */
-  #Tool table tr{
-    display:block;
-    margin-bottom:28px;
-    padding-bottom:20px;
-    border-bottom:1px solid #e6e6e6;
-  }
-  #Tool table td{
-    display:block;
-    width:100% !important;
-    padding:6px 0 !important;
-    text-align:left !important;
-  }
+  #Publication img,
   #Tool img{
-    width:100% !important;
-    height:auto !important;
-    border-radius:8px;
-    margin-bottom:10px;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  #Experience img,
+  #Teaching img{
+    max-width: 96px !important;
+    margin-bottom: 8px;
   }
   #Tool papertitle,
   #Tool strong{
-    font-size:18px;
-    display:block;
-    margin-bottom:6px;
-    color:#1b6535;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 6px;
   }
-  #Tool p{
-    font-size:15px;
-    line-height:1.55;
-    color:#444;
-  }
+  #Tool p{ font-size: 14.5px; }
 
-  /* Contact Mobile */
-  #Contact .showcase-right{width:100%; padding-top:12px;}
-  #Contact .contact-item{margin:10px 0;}
-  #Contact .contact-svg{width:22px !important; height:22px !important;}
-  #Contact .contact-item a{font-size:16px;}
+  /* Service mobile: compact cards */
+  #Service .service-grid{
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  #Service .service-card{
+    grid-template-columns: 70px 1fr auto;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  #Service .service-abbr{ font-size: 13px; }
+  #Service .service-full{ font-size: 13px; }
+  #Service .service-years{ font-size: 11.5px; }
+
+  /* Contact */
+  #Contact .showcase-right{ width: 100%; padding-top: 4px; }
+  #Contact .contact-item{ margin: 8px 0; }
+  #Contact .contact-item a{ font-size: 14.5px; }
 }
 
-/* ============= Footer ============= */
-footer{text-align:center; margin:20px; color:#8b9596;}
+/* ========================================================
+   Reduce motion
+   ======================================================== */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    transition: none !important;
+    animation: none !important;
+  }
+  html{ scroll-behavior: auto; }
+}
