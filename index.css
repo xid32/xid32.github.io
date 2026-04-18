@@ -486,6 +486,49 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   margin-top: 6px;
 }
 
+/* ---------- Publication: Venue Badge ---------- */
+#Publication .pub-cover{
+  text-align: center;
+}
+
+#Publication .venue-badge{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 8px;
+  margin: 0 auto 10px;
+  border-top: 2px solid var(--accent-deep);
+  border-bottom: 1px solid var(--accent-soft);
+  max-width: 100px;
+  min-height: 52px;
+  background: transparent;
+}
+
+#Publication .venue-name{
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--accent-deep);
+  line-height: 1;
+}
+
+#Publication .venue-year{
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--ink-muted);
+  line-height: 1;
+}
+
+#Publication .pub-cover img{
+  display: block;
+  margin: 0 auto;
+}
+
 /* ---------- Publication: Expandable Abstract ---------- */
 #Publication .pub-abstract{
   margin-top: 10px;
