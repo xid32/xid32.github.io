@@ -4,7 +4,7 @@
    ========================================================== */
 
 /* ---------- Typography & Color Tokens ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   /* Layout */
@@ -14,7 +14,7 @@
   --content-max: 1240px;
 
   /* Type */
-  --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --font-serif: "Crimson Pro", "Charter", "Source Serif Pro", Georgia, "Times New Roman", serif;
   --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* Palette — soft, refined academic */
@@ -49,9 +49,9 @@ html, body{
   font-family: var(--font-serif);
   color: var(--ink);
   background: var(--bg);
-  font-size: 17px;
-  line-height: 1.65;
-  font-weight: 450;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
