@@ -474,7 +474,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
   font-style: italic;
   color: var(--ink-soft);
 }
-#Publication sup{ font-size: 10px; color: var(--highlight); }
+#Publication sup{ font-size: 10px; color: var(--ink-muted); }
 
 /* Tool: papertitle not a link but still should look refined */
 #Tool papertitle{
@@ -721,7 +721,7 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 }
 
 #Service .service-full{
-  font-family: var(--font-serif);
+  font-family: var(--font-serif) !important;
   font-size: 14px;
   line-height: 1.4;
   color: var(--ink-soft);
