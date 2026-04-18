@@ -912,13 +912,30 @@ font[color="#E55C5C"] strong{
     text-align: left !important;
     border-bottom: none;
   }
+  /* Publication / Tool image: large, centered card-style on mobile */
   #Publication img,
-  #Tool img{
+  #Tool img,
+  #Publication table img,
+  #Tool table img{
+    display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 360px !important;
     height: auto !important;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    object-fit: unset !important;
+    margin: 0 auto 14px auto !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 10px rgba(20,20,20,0.08) !important;
+  }
+  #Publication td:first-child,
+  #Tool td:first-child,
+  #Publication table td:first-child,
+  #Tool table td:first-child{
+    width: 100% !important;
+    padding: 0 0 4px 0 !important;
+  }
+  #Publication td,
+  #Tool td{
+    font-size: 15px !important;
   }
   #Experience img,
   #Teaching img{
