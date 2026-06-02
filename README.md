@@ -49,7 +49,7 @@ My research focuses on **multimodal learning** for video, audio, and language un
 
 * **Samsung Research America (Mar 2026 – Jun 2026)**\
   *NLP Research Intern, Mountain View, CA*\
-  Research on **agentic memories**.
+  Research on **parametric memory**.
 
 * **Amazon Science (Jun 2025 – Sept 2025)**\
   *Applied Scientist Intern, Santa Cruz, CA*\
