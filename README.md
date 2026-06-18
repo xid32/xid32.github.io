@@ -8,8 +8,13 @@ Previously, I completed my M.S. in Computer Science at Northwestern University �
 
 ### 🔍 Research
 
-My research focuses on **multimodal learning** for video, audio, and language understanding. I have developed methods for multimodal reasoning, efficient multimodal learning, and generative multimodal modeling, aiming to build scalable and generalizable multimodal models that advance multimodal question answering, video understanding, and audio–visual reasoning across complex real-world scenarios and dynamic environments. Highlights of my work include:
+My research focuses on **multimodal learning** for video, audio, and language understanding. I develop methods for multimodal reasoning, efficient multimodal learning, and VLM-based GUI agents, with the goal of building scalable and generalizable models for multimodal question answering and agentic decision-making in complex, dynamic real-world environments. Highlights of my work include:
 
+
+- **[Doc-to-Atom: Learning to Compile and Compose Memory Atoms](https://arxiv.org/pdf/2606.12400)**  
+  *arXiv Preprint 2026*  
+  **Xingjian Diao**, Wenbo Li, Yashas Malur Saidutta, Avinash Amballa, Lazar Valkov, Srinivas Chappidi
+  
 - **[Addressing Overthinking in Large Vision-Language Models via Gated Perception-Reasoning Optimization](https://arxiv.org/pdf/2601.04442)**  
   *Findings of ACL 2026*  
   **Xingjian Diao**, Zheyuan Liu, Chunhui Zhang, Weiyi Wu, Keyi Kong, Lin Shi, Kaize Ding, Soroush Vosoughi, Jiang Gui  
