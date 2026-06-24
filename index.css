@@ -922,21 +922,15 @@ font[color="#E55C5C"] strong{
   }
   .mobile-nav .nav-item a{
     font-family: var(--font-sans);
-    font-size: 14.5px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    color: var(--ink-soft) !important;
-    padding: 8px 14px;
-    border: 0;
-    border-radius: 6px;
-    background: transparent;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent) !important;
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--card);
     text-decoration: none !important;
     display: inline-block;
-    transition: background .18s ease, color .18s ease;
-  }
-  .mobile-nav .nav-item a:hover{
-    color: var(--accent) !important;
-    background: var(--accent-soft);
   }
 
   html{ scroll-padding-top: 80px; }
