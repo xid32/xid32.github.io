@@ -386,7 +386,8 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
    Publications & Tool — shared card table styling
    ======================================================== */
 #Publication h3,
-#Publication .section-heading{
+#Publication .section-heading,
+#Service .service-head-right h3{
   font-family: var(--font-serif) !important;
   font-size: 19px !important;
   font-weight: 600 !important;
@@ -688,6 +689,36 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
    Service — Reviewer / Program Committee
    Responsive card grid
    ======================================================== */
+/* Service uses aligned label/grid rows instead of the shared 2-col layout */
+#Service{ display: block; }
+#Service .service-head{
+  display: flex;
+  gap: 48px;
+  align-items: baseline;
+}
+#Service .service-head-left{
+  width: 28%;
+  flex: 0 0 28%;
+}
+#Service .service-head-right{
+  width: 72%;
+}
+#Service .service-row{
+  display: flex;
+  gap: 48px;
+  margin-top: 32px;
+}
+#Service .service-row-left{
+  width: 28%;
+  flex: 0 0 28%;
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  align-self: flex-start;
+}
+#Service .service-row-right{
+  width: 72%;
+}
+
 #Service .service-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -757,17 +788,8 @@ section[id]{ scroll-margin-top: calc(var(--nav-h) + 20px); }
 #Contact .contact-item{
   display: flex;
   align-items: center;
-  margin: 14px 0;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: transparent;
-  border: 1px solid var(--rule-soft);
-  transition: border-color .2s ease, background .2s ease, transform .15s ease;
-}
-#Contact .contact-item:hover{
-  border-color: var(--accent);
-  background: rgba(255,255,255,0.4);
-  transform: translateY(-1px);
+  margin: 10px 0;
+  transition: transform .15s ease;
 }
 #Contact .contact-svg{
   width: 22px !important;
@@ -868,6 +890,12 @@ font[color="#E55C5C"] strong{
   #Service .service-grid{
     grid-template-columns: 1fr;
   }
+  #Service .service-row{ gap: 36px; }
+  #Service .service-row-left{ width: 30%; flex-basis: 30%; }
+  #Service .service-row-right{ width: 70%; }
+  #Service .service-head{ gap: 36px; }
+  #Service .service-head-left{ width: 30%; flex-basis: 30%; }
+  #Service .service-head-right{ width: 70%; }
 }
 
 /* ========================================================
@@ -894,15 +922,21 @@ font[color="#E55C5C"] strong{
   }
   .mobile-nav .nav-item a{
     font-family: var(--font-sans);
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--accent) !important;
-    padding: 8px 12px;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    background: var(--card);
+    font-size: 14.5px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: var(--ink-soft) !important;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
     text-decoration: none !important;
     display: inline-block;
+    transition: background .18s ease, color .18s ease;
+  }
+  .mobile-nav .nav-item a:hover{
+    color: var(--accent) !important;
+    background: var(--accent-soft);
   }
 
   html{ scroll-padding-top: 80px; }
@@ -994,6 +1028,15 @@ font[color="#E55C5C"] strong{
     margin-bottom: 6px;
   }
   #Tool p{ font-size: 14.5px; }
+
+  /* Service mobile: stack label above its grid */
+  #Service .service-row{ display: block; margin-top: 24px; }
+  #Service .service-row-left{ width: 100%; position: static; }
+  #Service .service-row-right{ width: 100%; }
+  #Service .service-row-left .showcase-left-desc{ margin-bottom: 12px; }
+  #Service .service-head{ display: block; }
+  #Service .service-head-left{ width: 100%; }
+  #Service .service-head-right{ width: 100%; margin-top: 12px; }
 
   /* Service mobile: compact cards */
   #Service .service-grid{
