@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm **[Xingjian Diao](https://xid32.github.io/)**, a Ph.D. candidate in Computer Science at Dartmouth College 🌲, co-advised by [Prof. Soroush Vosoughi](https://www.cs.dartmouth.edu/~soroush/) and [Prof. Jiang Gui](https://scholar.google.com/citations?user=Yd2HEqsAAAAJ&hl=en). During my Ph.D. at Dartmouth, I interned twice at [Amazon](https://www.amazon.science/) on computer vision and robotics (Summer 2025) and VLM systems (Summer 2026), and at [Samsung Research America](https://sra.samsung.com/) on parametric memory (Spring 2026).
+I'm **[Xingjian Diao](https://xid32.github.io/)**, a Ph.D. candidate in Computer Science at Dartmouth College 🌲, co-advised by [Prof. Soroush Vosoughi](https://www.cs.dartmouth.edu/~soroush/) and [Prof. Jiang Gui](https://scholar.google.com/citations?user=Yd2HEqsAAAAJ&hl=en). During my Ph.D. at Dartmouth, I interned twice at [Amazon](https://www.amazon.science/) (Summer 2025 and 2026), and at [Samsung Research America](https://sra.samsung.com/) (Spring 2026).
 
 Previously, I completed my M.S. in Computer Science at Northwestern University 💜, advised by [Prof. Nabil Alshurafa](https://www.thehabitslab.com/). I received my B.S. in Computer Science from the University of Pittsburgh 💙, graduating with Cum Laude honors.
 
@@ -8,7 +8,7 @@ Previously, I completed my M.S. in Computer Science at Northwestern University �
 
 ### 🔍 Research
 
-My research focuses on **multimodal learning** for video, audio, and language understanding. I develop methods for multimodal reasoning, efficient multimodal learning, and VLM-based GUI agents, with the goal of building scalable and generalizable models for multimodal question answering and agentic decision-making in complex, dynamic real-world environments. Highlights of my work include:
+My research focuses on **multimodal learning** across vision, audio, and language. I develop scalable MLLMs through **synthetic data flywheels**, **post-training**, and **multimodal reasoning**, with a focus on improving adaptation, reasoning, and interaction in multimodal QA and VLM-based GUI agents operating in complex environments. Highlights of my work include:
 
 
 - **[Doc-to-Atom: Learning to Compile and Compose Memory Atoms](https://arxiv.org/pdf/2606.12400)**  
