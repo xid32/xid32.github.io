@@ -14,6 +14,10 @@ My research focuses on **multimodal learning** across vision, audio, and languag
   *Preprint 2026*  
   **Xingjian Diao** et. al.
 
+- **[Of Errors and Echoes in Tool-Use Agent Credit Assignment](https://xid32.github.io/images/publications/ECHO.pdf)**  
+  *Preprint 2026*  
+  **Xingjian Diao** et. al.
+
 - **[Doc-to-Atom: Learning to Compile and Compose Memory Atoms](https://arxiv.org/pdf/2606.12400)**  
   *arXiv Preprint 2026*  
   **Xingjian Diao**, Wenbo Li, Yashas Malur Saidutta, Avinash Amballa, Lazar Valkov, Srinivas Chappidi
