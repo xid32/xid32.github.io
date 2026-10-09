@@ -14,9 +14,9 @@ My research focuses on **multimodal learning** across vision, audio, and languag
   *Preprint 2026*  
   **Xingjian Diao** et. al.
 
-- **[Of Errors and Echoes in Tool-Use Agent Credit Assignment](https://xid32.github.io/images/publications/ECHO.pdf)**  
+- **[Of Errors and Echoes: Responsibility-Aware Credit Assignment for Tool-Use Agents](https://xid32.github.io/images/publications/ECHO.pdf)**  
   *Preprint 2026*  
-  **Xingjian Diao** et. al.
+  **Xingjian Diao**, Tianyu Yang, Wenjun Huang, Xiangchi Yuan, Chunhui Zhang, Xingchen Zhao, Weiyi Wu, Haotian Xu, Soroush Vosoughi, Xiangliang Zhang, Jiang Gui
 
 - **[Doc-to-Atom: Learning to Compile and Compose Memory Atoms](https://arxiv.org/pdf/2606.12400)**  
   *arXiv Preprint 2026*  
