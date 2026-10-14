@@ -14,7 +14,7 @@ My research focuses on **multimodal learning** across vision, audio, and languag
   *Preprint 2026*  
   **Xingjian Diao** et. al.
 
-- **[Of Errors and Echoes: Responsibility-Aware Credit Assignment for Tool-Use Agents](https://xid32.github.io/images/publications/ECHO.pdf)**  
+- **[Of Errors and Echoes: Responsibility-Aware Credit Assignment for Tool-Use Agents](https://arxiv.org/pdf/2610.16027)**  
   *Preprint 2026*  
   **Xingjian Diao**, Tianyu Yang, Wenjun Huang, Xiangchi Yuan, Chunhui Zhang, Xingchen Zhao, Weiyi Wu, Haotian Xu, Soroush Vosoughi, Xiangliang Zhang, Jiang Gui
 
