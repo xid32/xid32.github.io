@@ -8,11 +8,11 @@ Previously, I completed my M.S. in Computer Science at Northwestern University 
 
 ### üîç Research
 
-My research focuses on **multimodal learning** across vision, audio, and language. I develop scalable MLLMs through **synthetic data flywheels**, **post-training**, and **multimodal reasoning**, with a focus on improving adaptation, reasoning, and interaction in multimodal QA and VLM-based GUI agents operating in complex environments. Highlights of my work include:
+My research focuses on **post-training** and **reinforcement learning** for MLLMs and agents, particularly hill-climbing pipelines built on **synthetic data flywheels**, reward modeling, and evaluation. Highlights of my work include:
 
 - **[A Verifiable Data Flywheel for Mobile GUI Agents](https://xid32.github.io/images/publications/mobile_gui_flywheel.pdf)**  
   *Preprint 2026*  
-  **Xingjian Diao** et. al.
+  **Xingjian Diao** et al.
 
 - **[Of Errors and Echoes: Responsibility-Aware Credit Assignment for Tool-Use Agents](https://arxiv.org/pdf/2610.16027)**  
   *Preprint 2026*  
